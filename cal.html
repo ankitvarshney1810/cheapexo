@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cheapexo - Flight Booking, Train Reservation, Hotels, Cheap Air Tickets</title>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#281483">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/the-datepicker.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script src="js/the-datepicker.js"></script>
+    <link rel="icon" href="images/icon.png" type="image"/>
+</head>
+<body>
+
+   <style>
+      .date-picker
+	margin: 200px auto
+
+.date-picker
+	$height: 50px
+	$width: 260px
+	$color-one-light: #8392A7
+	$color-one-dark: #68768A
+	$color-white: #fff
+	
+	width: $width
+	height: auto
+	max-height: $height
+	background: white
+	position: relative
+	overflow: hidden
+	transition: all 0.3s 0s ease-in-out
+	.input
+		width: 100%
+		height: $height
+		font-size: 0
+		cursor: pointer
+		.result, button
+			display: inline-block
+			vertical-align: top
+		.result
+			width: calc(100% - #{$height})
+			height: $height
+			line-height: $height
+			font-size: 16px
+			padding: 0 10px
+			color: grey
+			box-sizing: border-box
+		button
+			width: $height
+			height: $height
+			background-color: $color-one-light
+			color: white
+			line-height: $height
+			border: 0
+			font-size: 18px
+			padding: 0
+			&:hover
+				background-color: $color-one-dark
+			&:focus
+				outline: 0
+
+	.calendar
+		position: relative
+		width: 100%
+		background: #fff
+		border-radius: 0px
+		overflow: hidden
+	
+	.ui-datepicker-inline
+		position: relative
+		width: 100%
+
+	.ui-datepicker-header
+		height: 100%
+		line-height: 50px
+		background: $color-one-light
+		color: $color-white
+		margin-bottom: 10px
+
+	.ui-datepicker-prev, .ui-datepicker-next
+		width: 20px
+		height: 20px
+		text-indent: 9999px
+		border: 2px solid $color-white
+		border-radius: 100%
+		cursor: pointer
+		overflow: hidden
+		margin-top: 12px
+
+	.ui-datepicker-prev
+		float: left
+		margin-left: 12px
+		&:after
+			transform: rotate(45deg)
+			margin: -43px 0px 0px 8px
+
+	.ui-datepicker-next
+		float: right
+		margin-right: 12px
+		&:after
+			transform: rotate(-135deg)
+			margin: -43px 0px 0px 6px
+
+	.ui-datepicker-prev, .ui-datepicker-next
+		&:after
+			content: ''
+			position: absolute
+			display: block
+			width: 4px
+			height: 4px
+			border-left: 2px solid $color-white
+			border-bottom: 2px solid $color-white
+
+	.ui-datepicker-prev:hover, .ui-datepicker-next:hover, .ui-datepicker-prev:hover:after, .ui-datepicker-next:hover:after
+		border-color: $color-one-dark
+
+	.ui-datepicker-title
+		text-align: center
+
+	.ui-datepicker-calendar
+		width: 100%
+		text-align: center
+		thead
+			tr
+				th
+					span
+						display: block
+						width: 100%
+						color: $color-one-light
+						margin-bottom: 5px
+						font-size: 13px
+
+	.ui-state-default
+		display: block
+		text-decoration: none
+		color: #b5b5b5
+		line-height: 40px
+		font-size: 12px
+		&:hover
+			background: rgba(0,0,0,0.02)
+
+	.ui-state-highlight
+		color: $color-one-dark
+
+	.ui-state-active
+		color: $color-one-dark
+		background-color: rgba(131, 146, 167, 0.12)
+		font-weight: 600
+
+	.ui-datepicker-unselectable
+		.ui-state-default
+			color: #eee
+			border: 2px solid transparent
+	
+	&.open
+		max-height: 400px
+		.input
+			button
+				background: $color-one-dark
+
+
+   </style>
+
+
+
+    
+    <div class="rd-container flight-dep-cal extra-bottom rd-container-attachment">
+        <div class="rd-date">
+           <div class="rd-month">
+               <i class="fas fa-arrow-left left"></i>
+              <div class="rd-month-label">December 2019</div>
+              <i class="fas fa-arrow-right right"></i>
+              <table class="rd-days">
+                 <thead class="rd-days-head">
+                    <tr class="rd-days-row">
+                       <th class="rd-day-head">Sun</th>
+                       <th class="rd-day-head">Mon</th>
+                       <th class="rd-day-head">Tue</th>
+                       <th class="rd-day-head">Wed</th>
+                       <th class="rd-day-head">Thu</th>
+                       <th class="rd-day-head">Fri</th>
+                       <th class="rd-day-head">Sat</th>
+                    </tr>
+                 </thead>
+                 <tbody class="rd-days-body" data-rome-offset="0">
+                    <tr class="rd-days-row">
+                       <td class="rd-day-body rd-day-disabled start-of-month" data-date="01122019" data-month-year="122019">
+                          <div class="day has-info">1</div>
+                          <div class="info"></div>
+                       </td>
+                       <td class="rd-day-body rd-day-disabled high" data-date="02122019">
+                          <div class="day has-info">2</div>
+                          <div class="info"></div>
+                       </td>
+                       <td class="rd-day-body rd-day-disabled high" data-date="03122019">
+                          <div class="day has-info">3</div>
+                          <div class="info"></div>
+                       </td>
+                       <td class="rd-day-body trip-date trip-oneWay rd-day-selected high" data-date="04122019">
+                          <div class="day has-info">4</div>
+                          <div class="info">6541</div>
+                       </td>
+                       <td class="rd-day-body" data-date="05122019">
+                          <div class="day has-info">5</div>
+                          <div class="info">5822</div>
+                       </td>
+                       <td class="rd-day-body high" data-date="06122019">
+                          <div class="day has-info">6</div>
+                          <div class="info">6747</div>
+                       </td>
+                       <td class="rd-day-body high" data-date="07122019">
+                          <div class="day has-info">7</div>
+                          <div class="info">7515</div>
+                       </td>
+                    </tr>
+                    <tr class="rd-days-row">
+                       <td class="rd-day-body high" data-date="08122019">
+                          <div class="day has-info">8</div>
+                          <div class="info">8533</div>
+                       </td>
+                       <td class="rd-day-body high" data-date="09122019">
+                          <div class="day has-info">9</div>
+                          <div class="info">7629</div>
+                       </td>
+                       <td class="rd-day-body high" data-date="10122019">
+                          <div class="day has-info">10</div>
+                          <div class="info">6526</div>
+                       </td>
+                       <td class="rd-day-body" data-date="11122019">
+                          <div class="day has-info">11</div>
+                          <div class="info">6110</div>
+                       </td>
+                       <td class="rd-day-body" data-date="12122019">
+                          <div class="day has-info">12</div>
+                          <div class="info">5262</div>
+                       </td>
+                       <td class="rd-day-body" data-date="13122019">
+                          <div class="day has-info">13</div>
+                          <div class="info">3493</div>
+                       </td>
+                       <td class="rd-day-body" data-date="14122019">
+                          <div class="day has-info">14</div>
+                          <div class="info">5262</div>
+                       </td>
+                    </tr>
+                    <tr class="rd-days-row">
+                       <td class="rd-day-body" data-date="15122019">
+                          <div class="day has-info">15</div>
+                          <div class="info">4185</div>
+                       </td>
+                       <td class="rd-day-body" data-date="16122019">
+                          <div class="day has-info">16</div>
+                          <div class="info">3493</div>
+                       </td>
+                       <td class="rd-day-body" data-date="17122019">
+                          <div class="day has-info">17</div>
+                          <div class="info">4687</div>
+                       </td>
+                       <td class="rd-day-body" data-date="18122019">
+                          <div class="day has-info">18</div>
+                          <div class="info">4185</div>
+                       </td>
+                       <td class="rd-day-body" data-date="19122019">
+                          <div class="day has-info">19</div>
+                          <div class="info">4306</div>
+                       </td>
+                       <td class="rd-day-body" data-date="20122019">
+                          <div class="day has-info">20</div>
+                          <div class="info">4687</div>
+                       </td>
+                       <td class="rd-day-body" data-date="21122019">
+                          <div class="day has-info">21</div>
+                          <div class="info">4306</div>
+                       </td>
+                    </tr>
+                    <tr class="rd-days-row">
+                       <td class="rd-day-body" data-date="22122019">
+                          <div class="day has-info">22</div>
+                          <div class="info">5262</div>
+                       </td>
+                       <td class="rd-day-body" data-date="23122019">
+                          <div class="day has-info">23</div>
+                          <div class="info">5419</div>
+                       </td>
+                       <td class="rd-day-body" data-date="24122019">
+                          <div class="day has-info">24</div>
+                          <div class="info">4185</div>
+                       </td>
+                       <td class="rd-day-body" data-date="25122019">
+                          <div class="day has-info">25</div>
+                          <div class="info">4949</div>
+                       </td>
+                       <td class="rd-day-body high" data-date="26122019">
+                          <div class="day has-info">26</div>
+                          <div class="info">6747</div>
+                       </td>
+                       <td class="rd-day-body" data-date="27122019">
+                          <div class="day has-info">27</div>
+                          <div class="info">5419</div>
+                       </td>
+                       <td class="rd-day-body" data-date="28122019">
+                          <div class="day has-info">28</div>
+                          <div class="info">4687</div>
+                       </td>
+                    </tr>
+                    <tr class="rd-days-row">
+                       <td class="rd-day-body" data-date="29122019">
+                          <div class="day has-info">29</div>
+                          <div class="info">5822</div>
+                       </td>
+                       <td class="rd-day-body" data-date="30122019">
+                          <div class="day has-info">30</div>
+                          <div class="info">5419</div>
+                       </td>
+                       <td class="rd-day-body end-of-month high" data-date="31122019">
+                          <div class="day has-info">31</div>
+                          <div class="info">7629</div>
+                       </td>
+                       <td class="rd-day-body rd-day-next-month rd-day-concealed start-of-month" data-date="01012020">
+                          <div class="day has-info">1</div>
+                          <div class="info">4687</div>
+                       </td>
+                       <td class="rd-day-body rd-day-next-month rd-day-concealed" data-date="02012020">
+                          <div class="day has-info">2</div>
+                          <div class="info">4687</div>
+                       </td>
+                       <td class="rd-day-body rd-day-next-month rd-day-concealed" data-date="03012020">
+                          <div class="day has-info">3</div>
+                          <div class="info">4687</div>
+                       </td>
+                       <td class="rd-day-body rd-day-next-month rd-day-concealed" data-date="04012020">
+                          <div class="day has-info">4</div>
+                          <div class="info">5014</div>
+                       </td>
+                    </tr>
+                 </tbody>
+              </table>
+           </div>
+           <div class="rd-month">
+                <i class="fas fa-arrow-right right"></i>
+              <div class="rd-month-label">January 2020</div>
+              <table class="rd-days">
+                 <thead class="rd-days-head">
+                    <tr class="rd-days-row">
+                       <th class="rd-day-head">Sun</th>
+                       <th class="rd-day-head">Mon</th>
+                       <th class="rd-day-head">Tue</th>
+                       <th class="rd-day-head">Wed</th>
+                       <th class="rd-day-head">Thu</th>
+                       <th class="rd-day-head">Fri</th>
+                       <th class="rd-day-head">Sat</th>
+                    </tr>
+                 </thead>
+                 <tbody class="rd-days-body" data-rome-offset="1">
+                    <tr class="rd-days-row">
+                       <td class="rd-day-body rd-day-prev-month rd-day-concealed" data-date="29122019">
+                          <div class="day has-info">29</div>
+                          <div class="info">5822</div>
+                       </td>
+                       <td class="rd-day-body rd-day-prev-month rd-day-concealed" data-date="30122019">
+                          <div class="day has-info">30</div>
+                          <div class="info">5419</div>
+                       </td>
+                       <td class="rd-day-body rd-day-prev-month rd-day-concealed end-of-month high" data-date="31122019">
+                          <div class="day has-info">31</div>
+                          <div class="info">7629</div>
+                       </td>
+                       <td class="rd-day-body start-of-month" data-date="01012020" data-month-year="012020">
+                          <div class="day has-info">1</div>
+                          <div class="info">4687</div>
+                       </td>
+                       <td class="rd-day-body" data-date="02012020">
+                          <div class="day has-info">2</div>
+                          <div class="info">4687</div>
+                       </td>
+                       <td class="rd-day-body" data-date="03012020">
+                          <div class="day has-info">3</div>
+                          <div class="info">4687</div>
+                       </td>
+                       <td class="rd-day-body" data-date="04012020">
+                          <div class="day has-info">4</div>
+                          <div class="info">5014</div>
+                       </td>
+                    </tr>
+                    <tr class="rd-days-row">
+                       <td class="rd-day-body high" data-date="05012020">
+                          <div class="day has-info">5</div>
+                          <div class="info">8472</div>
+                       </td>
+                       <td class="rd-day-body high" data-date="06012020">
+                          <div class="day has-info">6</div>
+                          <div class="info">6450</div>
+                       </td>
+                       <td class="rd-day-body" data-date="07012020">
+                          <div class="day has-info">7</div>
+                          <div class="info">4687</div>
+                       </td>
+                       <td class="rd-day-body" data-date="08012020">
+                          <div class="day has-info">8</div>
+                          <div class="info">4306</div>
+                       </td>
+                       <td class="rd-day-body" data-date="09012020">
+                          <div class="day has-info">9</div>
+                          <div class="info">3657</div>
+                       </td>
+                       <td class="rd-day-body" data-date="10012020">
+                          <div class="day has-info">10</div>
+                          <div class="info">3657</div>
+                       </td>
+                       <td class="rd-day-body" data-date="11012020">
+                          <div class="day has-info">11</div>
+                          <div class="info">3657</div>
+                       </td>
+                    </tr>
+                    <tr class="rd-days-row">
+                       <td class="rd-day-body low" data-date="12012020">
+                          <div class="day has-info">12</div>
+                          <div class="info">3269</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="13012020">
+                          <div class="day has-info">13</div>
+                          <div class="info">2897</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="14012020">
+                          <div class="day has-info">14</div>
+                          <div class="info">3206</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="15012020">
+                          <div class="day has-info">15</div>
+                          <div class="info">2897</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="16012020">
+                          <div class="day has-info">16</div>
+                          <div class="info">2897</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="17012020">
+                          <div class="day has-info">17</div>
+                          <div class="info">2897</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="18012020">
+                          <div class="day has-info">18</div>
+                          <div class="info">2897</div>
+                       </td>
+                    </tr>
+                    <tr class="rd-days-row">
+                       <td class="rd-day-body" data-date="19012020">
+                          <div class="day has-info">19</div>
+                          <div class="info">3359</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="20012020">
+                          <div class="day has-info">20</div>
+                          <div class="info">2897</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="21012020">
+                          <div class="day has-info">21</div>
+                          <div class="info">2897</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="22012020">
+                          <div class="day has-info">22</div>
+                          <div class="info">2897</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="23012020">
+                          <div class="day has-info">23</div>
+                          <div class="info">2897</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="24012020">
+                          <div class="day has-info">24</div>
+                          <div class="info">2897</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="25012020">
+                          <div class="day has-info">25</div>
+                          <div class="info">2897</div>
+                       </td>
+                    </tr>
+                    <tr class="rd-days-row">
+                       <td class="rd-day-body low" data-date="26012020">
+                          <div class="day has-info">26</div>
+                          <div class="info">2975</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="27012020">
+                          <div class="day has-info">27</div>
+                          <div class="info">2897</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="28012020">
+                          <div class="day has-info">28</div>
+                          <div class="info">2897</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="29012020">
+                          <div class="day has-info">29</div>
+                          <div class="info">2897</div>
+                       </td>
+                       <td class="rd-day-body low" data-date="30012020">
+                          <div class="day has-info">30</div>
+                          <div class="info">2897</div>
+                       </td>
+                       <td class="rd-day-body end-of-month low" data-date="31012020">
+                          <div class="day has-info">31</div>
+                          <div class="info">2897</div>
+                       </td>
+                       <td class="rd-day-body rd-day-next-month start-of-month" data-date="01022020">
+                          <div class="day has-info">1</div>
+                          <div class="info">-</div>
+                       </td>
+                    </tr>
+                 </tbody>
+              </table>
+           </div>
+        </div>
+    </div>
+
+    <div class="date-picker">
+      <div class="input">
+         <div class="result">Select Date: <span></span></div>
+         <button><i class="fa fa-calendar"></i></button>
+      </div>
+      <div class="calendar"></div>
+   </div>
+
+   <script>
+$(function() {
+  $( ".calendar" ).datepicker({
+		dateFormat: 'dd/mm/yy',
+		firstDay: 1
+	});
+	
+	$(document).on('click', '.date-picker .input', function(e){
+		var $me = $(this),
+				$parent = $me.parents('.date-picker');
+		$parent.toggleClass('open');
+	});
+	
+	
+	$(".calendar").on("change",function(){
+		var $me = $(this),
+				$selected = $me.val(),
+				$parent = $me.parents('.date-picker');
+		$parent.find('.result').children('span').html($selected);
+	});
+});
+   </script>
+
+
+
+
+<script type="text/javascript" src="js/cheapexo.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

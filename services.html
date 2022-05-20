@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cheapexo - Flight Booking, Train Reservation, Hotels, Cheap Air Tickets</title>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#281483">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/the-datepicker.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script src="js/the-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="icon" href="images/icon.png" type="image"/>
+</head>
+<body class="dim-dark-background">
+    <header class="solid-back">
+        <a href="" class="site-name"><img src="images/cheapexo-dark.png" alt=""></a>
+        <nav>
+            <a href="" class="link active"><i class="fas fa-plane-departure"></i>Fligths<span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-hotel"></i>Hotels <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-bus"></i>Buses <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-taxi"></i>Taxi <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-train"></i>Trains <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-ship"></i>Cruise <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-helicopter"></i>Helicopter <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-taxi"></i>Air Taxi <span class="line"></span></a>
+            <a href="" class="link"><i class="fab fa-cc-visa"></i></i>Visa <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-gift"></i>Offers <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-pencil-alt"></i>Travel Stories <span class="line"></span></a>
+            <div class="dropdown">
+                <span class="dropbtn">More..</span>
+                <div class="dropdown-content">
+                    <a href="" class="drop-link">Forex</a>
+                    <a href="" class="drop-link">Anything</a>
+                </div>
+            </div>
+        </nav>
+        <div class="login" id="login">
+            <i class="fas fa-user-circle"></i>
+            <div class="user-more-info" id="user-more-info">
+                <div class="tip"></div>
+                <div class="item">Account</div>
+                <div class="item">Bookings</div>
+                <div class="item">Alerts</div>
+                <div class="item">Travellers</div>
+                <div class="item">Logout</div>
+            </div>
+        </div>
+        <div class="btnm">
+            <div class="btnmenu">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </div>
+        </div>
+    </header>
+    <div class="model login-model">
+        <div class="login-box">
+            <div class="login-head">
+                <img src="images/close-light.svg" alt="" class="close">
+                <div class="form-title">Sign In</div>
+            </div>
+            <form class="login-body">
+                <div class="inputBox">
+                    <div class="inputText">USERNAME</div>
+                    <input type="text" name="username" class="input" id="username" required>
+                </div>
+                <div class="inputBox">
+                    <div class="inputText">PASSWORD</div>
+                    <input type="password" name="password" class="input" id="password" required>
+                </div>
+                <a href="forget.html" class="forget">Forget Password ?</a>
+                <div class="inputBox">
+                    <input type="submit"  class="btn-apply" value="LOGIN">
+                </div>
+                <span class="signup-notify">Don't have an account? <strong>SIGN UP</strong></span>
+            </form>
+        </div>
+        <div class="signup-box">
+                <div class="signup-head">
+                    <img src="images/close-light.svg" alt="" class="close">
+                    <div class="form-title">Sign Up</div>
+                </div>
+                <form class="signup-body">
+                    <div class="inputBox">
+                        <div class="inputText">Email / Mobile number</div>
+                        <input type="text" name="username" class="input" id="username" required>
+                    </div>
+                    <div class="inputBox">
+                        <div class="inputText">PASSWORD</div>
+                        <input type="password" name="password" class="input" id="password" required>
+                    </div>
+                    <div class="inputBox">
+                        <div class="inputText">CONFIRM PASSWORD</div>
+                        <input type="password" name="confirm-password" class="input" id="confirm-password" required>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit"  class="btn-apply" value="LOGIN">
+                    </div>
+                    <span class="signin-notify">Have an account? <strong>SIGN IN</strong></span>
+                </form>
+            </div>
+    </div>
+    <section class="search-header">
+        <div class="form-box">
+            <form action="flightbooking.html" method="post" class="container" autocomplete="off">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-content">
+                            <label for="fromF">From:</label>
+                            <input type="text" name="frominput" value='' id="from" class="frominput" placeholder="Enter City or Airport" onfocus="document.getElementById('fromvalidate').style.display = 'none'">
+                            <input type='hidden'     name='from_airport_id' id='from_airport_id'>
+                            <span class="validation" id="fromvalidate">Please Enter Departure Airport <span class="valid-clip"></span></span>
+                            <div class="from_main_div" id="from_main_div"></div> 
+                            <div class="exchange" id="exchange"><i class="fas fa-exchange-alt"></i></div>  
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-content">
+                            <label for="toF">To:</label>
+                            <input type="text" name="toinput" value='' id="to" class="toinput" placeholder="Enter City or Airport" onfocus="document.getElementById('tovalidate').style.display = 'none'">
+                            <input type='hidden' value='' name='to_airport_id' id='to_airport_id'>
+                            <span class="validation" id="tovalidate">Please Enter Arrival Airport <span class="valid-clip"></span></span>
+                            <div class="to_main_div" id="to_main_div"></div>  
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-content">
+                            <label for="example">Departure</label>
+                            <input type="text" name="departure" id="example" class="datepicker" placeholder="Departure">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-content" id="return">
+                            <label for="example2">Return</label>
+                            <input type="text" name="return" id="example2" class="datepicker" placeholder="Return" disabled>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-content" id="passenger-box">
+                            <label for="passenger">Travellers | Class</label>
+                            <input  id="passenger" class="passenger" type="text" value="">
+                            <div class="custombox" id="custombox">
+                                <span class="close-travel-box" id="closetravelbox"><img src="images/close.svg" id="close" alt=""></span>
+                                <div class="row no-gutters">
+                                    <div class="col-6 border">
+                                        <div class="head">Travellers</div>
+                                        <div class="adult">
+                                            <span class="name">Adult<br><strong>(12+ yr)</strong></span>
+                                            <button type="button" class="btn-counter" onClick="minusadult()">-</button>
+                                            <input type="text" name="adult" class="text-counter" id="adult" value="1" onchange="passangercount()">
+                                            <button type="button" class="btn-counter" onClick="plusadult()">+</button>
+                                            <script type="text/javascript">
+                                                function minusadult() {
+                                                  var adult = parseInt(document.getElementById("adult").value);
+                                                  if(adult <= 1){
+                                                    return false;
+                                                  }
+                                                  else{
+                                                    adult -= 1;
+                                                    document.getElementById("adult").value = adult;
+                                                    var infant = parseInt(document.getElementById("infant").value);
+                                                    if(infant > adult){
+                                                        infant -= 1
+                                                        document.getElementById("infant").value = infant;
+                                                        passangercount();
+                                                    }
+                                                    passangercount();
+                                                  }
+                                                    
+                                                };
+                                                function plusadult() {
+                                                    var adult = parseInt(document.getElementById("adult").value);
+                                                    if(adult < 9){
+                                                      adult += 1;
+                                                      document.getElementById("adult").value = adult;
+                                                      passangercount();
+                                                    }
+                                                    else{
+                                                      return false;
+                                                    }
+                                                };
+                                            </script>
+                                        </div>
+                                        <div class="adult">
+                                            <span class="name">Child<br><strong>(2-11 yr)</strong></span>
+                                            <button type="button" class="btn-counter" onClick="minuschild()">-</button>
+                                            <input type="text"  class="text-counter" id="child" value="0" onchange="passangercount()" readonly>
+                                            <button type="button" class="btn-counter" onClick="pluschild()">+</button>
+                                            <script type="text/javascript">
+                                                function minuschild() {
+                                                  var child = parseInt(document.getElementById("child").value);
+                                                  if(child <= 0){
+                                                    return false;
+                                                  }
+                                                  else{
+                                                    child -= 1
+                                                    document.getElementById("child").value = child;
+                                                    passangercount();
+                                                  }
+                                                    
+                                                };
+                                                function pluschild() {
+                                                    var child = parseInt(document.getElementById("child").value);
+                                                    if(child < 9){
+                                                      child += 1
+                                                      document.getElementById("child").value = child;
+                                                    passangercount();
+                                                    }
+                                                    else{
+                                                      return false;
+                                                    }
+                                                };
+                                            </script>
+                                        </div>
+                                        <div class="adult">
+                                            <span class="name">Infant<br><strong>(0-2 yr)</strong></span>
+                                            <button type="button" class="btn-counter" onClick="minusinfant()">-</button>
+                                            <input type="text" class="text-counter" id="infant" value="0" onchange="passangercount()" readonly>
+                                            <button type="button" class="btn-counter" onClick="plusinfant()">+</button>
+                                            <script type="text/javascript">
+                                                function minusinfant() {
+                                                  var infant = parseInt(document.getElementById("infant").value);
+                                                  if(infant <= 0){
+                                                    return false;
+                                                  }
+                                                  else{
+                                                    infant -= 1
+                                                    document.getElementById("infant").value = infant;
+                                                    passangercount();
+                                                  }
+                                                    
+                                                };
+                                                function plusinfant() {
+                                                    var infant = parseInt(document.getElementById("infant").value);
+                                                    var adult = parseInt(document.getElementById("adult").value);
+                                                    if(infant < adult){
+                                                      infant += 1
+                                                      document.getElementById("infant").value = infant;
+                                                      passangercount();
+                                                    }
+                                                    else{
+                                                      return false;
+                                                    }
+                                                };
+                                            </script>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="head">Class</div>
+                                        <label class="container">Economy
+                                            <input type="radio" checked="checked" name="class" value="M" onchange="passangercount()">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">Premium Economy
+                                            <input type="radio" name="class" value="W" onchange="passangercount()">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">Business
+                                            <input type="radio" name="class" value="C" onchange="passangercount()">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <script> 
+                                            function passangercount() {
+                                              var adult, child, infant, classtype, count, passanger ;
+                                              adult = parseInt(document.getElementById('adult').value);
+                                              child = parseInt(document.getElementById('child').value);
+                                              infant = parseInt(document.getElementById('infant').value);
+                                              //alert(adult+child+infant);
+                                              var ele4 = document.getElementsByName('class'); 
+                                                var classtype;
+                                                for(i = 0; i < ele4.length; i++) { 
+                                                    if(ele4[i].checked) 
+                                                    classtype = ele4[i].value;
+                                                }
+                                                if(classtype=='M'){
+                                                    classtype = 'Economy';
+                                                }
+                                                else if(classtype=='W'){
+                                                    classtype = 'Premium Economy';
+                                                }
+                                                else if(classtype=='C'){
+                                                    classtype = 'Business';
+                                                }
+                                              count = adult + child + infant;
+                                              if(count <= 1){
+                                                passanger = count + ' Passanger, ' + classtype;
+                                              }
+                                              else{
+                                                passanger = count + ' Passangers, ' + classtype;
+                                                }
+                                              $('#passenger').val('') ; 
+                                              $('#passenger').val(passanger)
+                                            }
+                                        </script> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-right align-self-center">
+                        <input type="button" id="submit" class="btn btn-apply" value="SEARCH">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="flight-filter">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-2">
+                    <div class="filter-box-1 dashed-right-border">
+                        <div class="heading">Stoppages</div>
+                        <label class="filter-option">Non-Stop
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="filter-option">One-Stop
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="filter-option">Multi-Stop
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="filter-box-2 dashed-right-border">
+                        <div class="heading">Departure From</div>
+                        <label class="filter-option">Early Morning<br><span class="time">00:00-06:00</span>
+                            <input type="checkbox" class="timefilter" value="earlymorning" id="earlymorning" checked="checked" onchange="valueChanged()">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="filter-option">Morning<br><span class="time">06:00-12:00</span>
+                            <input type="checkbox" class="timefilter" value="morning" id="morning" checked="checked" onclick="valueChanged()">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="filter-option">Mid Day<br><span class="time">12:00-18:00</span>
+                            <input type="checkbox" class="timefilter" value="midday" id="midday" checked="checked" onchange="valueChanged()">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="filter-option">Night<br><span class="time">18:00-24:00</span>
+                            <input type="checkbox" class="timefilter" value="night" id="night" checked="checked" onchange="valueChanged()">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="filter-box-3 dashed-right-border">
+                        <div class="heading">Preference</div>
+                        <label class="filter-option">Cheapest
+                            <input type="radio" name="preference" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="filter-option">Quickest
+                            <input type="radio" name="preference">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="filter-option">Refundable
+                            <input type="radio" name="preference">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="filter-box-4 dashed-right-border">
+                        <div class="heading">Airlines</div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="filter-option">Air India
+                                    <input type="radio" name="preference" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="filter-option">Go Air
+                                    <input type="radio" name="preference">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="filter-option">Indigo
+                                    <input type="radio" name="preference">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="filter-option">Vistara
+                                    <input type="radio" name="preference">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="more">More Filter<i class="fas fa-chevron-down"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="date-by-price">
+                        <div class="owl-carousel">
+                            <a class="item current" rel="nofollow">
+                                <div class="date">20 Nov, Wed</div>
+                                <div class="prc">
+                                    <div class="c-price-display u-text-ellipsis " title="">
+                                        <img src="images/rupee.svg" alt="" class="rupee">
+                                        <span class="">6418</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="item" rel="nofollow">
+                                <div class="date">20 Nov, Wed</div>
+                                <div class="prc">
+                                    <div class="c-price-display u-text-ellipsis " title="">
+                                        <img src="images/rupee.svg" alt="" class="rupee">
+                                        <span class="">6418</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="item" rel="nofollow">
+                                <div class="date">20 Nov, Wed</div>
+                                <div class="prc">
+                                    <div class="c-price-display u-text-ellipsis " title="">
+                                        <img src="images/rupee.svg" alt="" class="rupee">
+                                        <span class="">6418</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="item" rel="nofollow">
+                                <div class="date">20 Nov, Wed</div>
+                                <div class="prc">
+                                    <div class="c-price-display u-text-ellipsis " title="">
+                                        <img src="images/rupee.svg" alt="" class="rupee">
+                                        <span class="">6418</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="item" rel="nofollow">
+                                <div class="date">20 Nov, Wed</div>
+                                <div class="prc">
+                                    <div class="c-price-display u-text-ellipsis " title="">
+                                        <img src="images/rupee.svg" alt="" class="rupee">
+                                        <span class="">6418</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="item" rel="nofollow">
+                                <div class="date">20 Nov, Wed</div>
+                                <div class="prc">
+                                    <div class="c-price-display u-text-ellipsis " title="">
+                                        <img src="images/rupee.svg" alt="" class="rupee">
+                                        <span class="">6418</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="item" rel="nofollow">
+                                <div class="date">20 Nov, Wed</div>
+                                <div class="prc">
+                                    <div class="c-price-display u-text-ellipsis " title="">
+                                        <img src="images/rupee.svg" alt="" class="rupee">
+                                        <span class="">6418</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="item" rel="nofollow">
+                                <div class="date">20 Nov, Wed</div>
+                                <div class="prc">
+                                    <div class="c-price-display u-text-ellipsis " title="">
+                                        <img src="images/rupee.svg" alt="" class="rupee">
+                                        <span class="">6418</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="item" rel="nofollow">
+                                <div class="date">20 Nov, Wed</div>
+                                <div class="prc">
+                                    <div class="c-price-display u-text-ellipsis " title="">
+                                        <img src="images/rupee.svg" alt="" class="rupee">
+                                        <span class="">6418</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="item" rel="nofollow">
+                                <div class="date">20 Nov, Wed</div>
+                                <div class="prc">
+                                    <div class="c-price-display u-text-ellipsis " title="">
+                                        <img src="images/rupee.svg" alt="" class="rupee">
+                                        <span class="">6418</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="item" rel="nofollow">
+                                <div class="date">20 Nov, Wed</div>
+                                <div class="prc">
+                                    <div class="c-price-display u-text-ellipsis " title="">
+                                        <img src="images/rupee.svg" alt="" class="rupee">
+                                        <span class="">6418</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="item" rel="nofollow">
+                                <div class="date">20 Nov, Wed</div>
+                                <div class="prc">
+                                    <div class="c-price-display u-text-ellipsis " title="">
+                                        <img src="images/rupee.svg" alt="" class="rupee">
+                                        <span class="">6418</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <script>
+                            $('.owl-carousel').owlCarousel({
+                                loop:false,
+                                nav:true,
+                                responsive:{
+                                    0:{
+                                        items:4
+                                    },
+                                    600:{
+                                        items:5
+                                    },
+                                    1000:{
+                                        items:7
+                                    }
+                                }
+                            })
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="row top-margin-10">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="login-button">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <span >Grab the cheapest fares. Don’t miss out!</span>
+                                <p>Wait for the right time to book. Set Fare Alerts & get notified instantly when fares drop.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-search-option-return" id="main-search-option-return">
+                        <div class="search-option morning">
+                            <div class="summary-section">
+                                <div class="flight-info">
+                                    <div class="airline-info">
+                                        <div class="logo">
+                                            <img src='images/airlines/spicejet.png' alt="">
+                                        </div>
+                                        <div class="text">
+                                            <a class="flight-name">Spicejet</a>
+                                            <div class="flight-number">204</div>
+                                        </div>
+                                    </div>
+                                    <div class="flight-summary-depart dashed-right-border">
+                                        <div class="left-wing">
+                                            <div class="city">New Delhi <span class="city-code">(DEL)</span></div>
+                                            <div class="time">16:10</div>
+                                        </div>
+                                        <div class="timeline-widget">
+                                            <div class="c-timeline-wrapper horizontal">
+                                                <div class="label tl first"></div>
+                                                <div class="label tl ">2Hr 20Min</div>
+                                                <div class="label tl last"></div>
+                                                <div class="c-timeline" id="stop">
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                </div>
+                                                <div class="label br first"></div>
+                                                <div class="label br ">1 stop</div>
+                                                <div class="label br last"></div>
+                                            </div>
+                                        </div>
+                                        <div class="right-wing">
+                                            <div class="city">Mumbai <span class="city-code">(BOM)</span></div>
+                                            <div class="time">18:20</div>
+                                        </div>
+                                        <div class="u-clear"></div>
+                                    </div>
+                                    <div class="flight-summary-return">
+                                        <div class="left-wing">
+                                            <div class="city">Mumbai <span class="city-code">(BOM)</span></div>
+                                            <div class="time">18:20</div>
+                                        </div>
+                                        <div class="timeline-widget">
+                                            <div class="c-timeline-wrapper horizontal">
+                                                <div class="label tl first"></div>
+                                                <div class="label tl ">2Hr 20Min</div>
+                                                <div class="label tl last"></div>
+                                                <div class="c-timeline" id="stop">
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                </div>
+                                                <div class="label br first"></div>
+                                                <div class="label br ">1 stop</div>
+                                                <div class="label br last"></div>
+                                            </div>
+                                        </div>
+                                        <div class="right-wing">
+                                            <div class="city">New Delhi <span class="city-code">(DEL)</span></div>
+                                            <div class="time">16:10</div>
+                                        </div>
+                                        <div class="u-clear"></div>
+                                    </div>
+                                    <div class="detail-links null">
+                                        <label class="u-rfloat link" id="check" onClick="idSelect(1)" for="1">Flight Detail <i class="ti-angle-down"></i></label>
+                                        <input type="checkbox" name="" class="detail-check" id="1" value="1">
+                                        <div class="u-clear"></div>
+                                    </div>
+                                </div>
+                                <div class="provider-list">
+                                    <div class="fare-provider-list u-fb single-item">
+                                        <div class="list-item selected-fare">
+                                            <div class="price-section">
+                                                <div class="price">
+                                                    <div class="c-price-display u-text-ellipsis " title="">
+                                                        <img src="images/serviceprovider/kiwi.jpg" class="serviceprovider" alt="">
+                                                        <span class=""><i class="fas fa-rupee-sign"></i>10452</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="features u-ib"> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="preferred-provider">
+                                    <div class="preferred-provider-container">
+                                        <button class="btn btn-apply enabled">
+                                            Book
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail-section fd_1">
+                                <div class="nav-wrapper">
+                                    <span>
+                                        <div class="nav-list-item u-uppercase u-ib  selected" data="0">Flight Details</div>
+                                    </span>
+                                </div>
+                                <div class="flight-segment-detail">
+                                    <div class="accordion-item">
+                                        <div class="accordion-hdr ">
+                                            <div class="accordion-hdr-cntnt">
+                                                <div class="leg-summary">
+                                                    <div class="u-lfloat">New Delhi to Mumbai</div>
+                                                    <div class="u-rfloat">
+                                                        <div class="date">Sun, 24 Nov</div>
+                                                        <i class="fas fa-circle"></i>
+                                                        <div class="time">1hr 15min</div>
+                                                    </div>
+                                                    <div class="u-clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-body">
+                                            <div class="segment">
+                                                <div class="airline">
+                                                    <div class="logo">
+                                                        <img src="images/airlines/spicejet.png">
+                                                    </div>
+                                                    <div class="info">Go Air G8208</div>
+                                                    <div class="aircraft-info">A320-200</div>
+                                                    <div class="cabin-class">economy</div>
+                                                    <div class="aircraft-info">Narrow 3-3 (Limited seat tilt)</div>
+                                                    <div class="aircraft-info">Narrow</div>
+                                                </div>
+                                                <div class="segment2">
+                                                    <div class="flight-info">
+                                                        <div class="summary">
+                                                            <div class="left-wing">
+                                                                <div class="highlight">
+                                                                    <div class="city">Lucknow</div>
+                                                                    <div class="airport-code">(LKO)</div>
+                                                                </div>
+                                                                <div class="time"> 06:40</div>
+                                                                <div class="date">Sun, 24 Nov</div>
+                                                                <div class="airport u-text-ellipsis" title="Amausi Airport">Amausi Airport</div>
+                                                            </div>
+                                                            <div class="middle">
+                                                                <div class="icon ti-time"></div>
+                                                                <div class="duration">1hr 15min</div>
+                                                            </div>
+                                                            <div class="right-wing">
+                                                                <div class="highlight">
+                                                                    <div class="city">New Delhi</div>
+                                                                    <div class="airport-code">(DEL)</div>
+                                                                </div>
+                                                                <div class="time"> 07:55</div>
+                                                                <div class="date">Sun, 24 Nov</div>
+                                                                <div class="airport u-text-ellipsis" title="Indira Gandhi Intl Airport">Indira Gandhi Intl Airport</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="u-clear"></div>
+                                                    </div>
+                                                    <div class="baggage">
+                                                        <div class="row no-gutters">
+                                                            <div class="col-6 text-center border">
+                                                                <div class="heading">Cabin Baggage</div>
+                                                                <span class="weight">15 Kg</span>
+                                                            </div>
+                                                            <div class="col-6 text-center">
+                                                                <div class="heading">Check-in Baggage</div>
+                                                                <span class="weight">7 Kg</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="amenities">
+                                                        <div class="row">
+                                                            <div class="col-6 text-center">
+                                                                <i class="fas fa-wifi wifi available"></i>
+                                                            </div>
+                                                            <div class="col-6 text-center">
+                                                                <i class="fas fa-plug plug"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row align-self-center top-margin-20">
+                                                            <div class="col-6 text-center">
+                                                                <i class="fas fa-utensils food"></i>
+                                                            </div>
+                                                            <div class="col-6 text-center">
+                                                                <i class="fab fa-youtube video"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="u-clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <div class="accordion-hdr ">
+                                            <div class="accordion-hdr-cntnt">
+                                                <div class="leg-summary">
+                                                    <div class="u-lfloat">Mumbai to New Delhi</div>
+                                                    <div class="u-rfloat">
+                                                        <div class="date">Tue, 26 Nov</div>
+                                                        <i class="fas fa-circle"></i>
+                                                        <div class="time">1hr 15min</div>
+                                                    </div>
+                                                    <div class="u-clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-body">
+                                            <div class="segment">
+                                                <div class="airline">
+                                                    <div class="logo">
+                                                        <img src="images/airlines/spicejet.png">
+                                                    </div>
+                                                    <div class="info">Go Air G8208</div>
+                                                    <div class="aircraft-info">A320-200</div>
+                                                    <div class="cabin-class">economy</div>
+                                                    <div class="aircraft-info">Narrow 3-3 (Limited seat tilt)</div>
+                                                    <div class="aircraft-info">Narrow</div>
+                                                </div>
+                                                <div class="segment2">
+                                                    <div class="flight-info">
+                                                        <div class="summary">
+                                                            <div class="left-wing">
+                                                                <div class="highlight">
+                                                                    <div class="city">New Delhi</div>
+                                                                    <div class="airport-code">(DEL)</div>
+                                                                </div>
+                                                                <div class="time"> 07:55</div>
+                                                                <div class="date">Tue, 26 Nov</div>
+                                                                <div class="airport u-text-ellipsis" title="Indira Gandhi Intl Airport">Indira Gandhi Intl Airport</div>
+                                                            </div>
+                                                            <div class="middle">
+                                                                <div class="icon ti-time"></div>
+                                                                <div class="duration">1hr 15min</div>
+                                                            </div>
+                                                            <div class="right-wing">
+                                                                <div class="highlight">
+                                                                    <div class="city">Lucknow</div>
+                                                                    <div class="airport-code">(LKO)</div>
+                                                                </div>
+                                                                <div class="time"> 09:10</div>
+                                                                <div class="date">Tue, 26 Nov</div>
+                                                                <div class="airport u-text-ellipsis" title="Amausi Airport">Amausi Airport</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="u-clear"></div>
+                                                    </div>
+                                                    <div class="baggage">
+                                                        <div class="row no-gutters">
+                                                            <div class="col-6 text-center border">
+                                                                <div class="heading">Cabin Baggage</div>
+                                                                <span class="weight">15 Kg</span>
+                                                            </div>
+                                                            <div class="col-6 text-center">
+                                                                <div class="heading">Check-in Baggage</div>
+                                                                <span class="weight">7 Kg</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="amenities">
+                                                        <div class="row">
+                                                            <div class="col-6 text-center">
+                                                                <i class="fas fa-wifi wifi available"></i>
+                                                            </div>
+                                                            <div class="col-6 text-center">
+                                                                <i class="fas fa-plug plug"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row align-self-center top-margin-20">
+                                                            <div class="col-6 text-center">
+                                                                <i class="fas fa-utensils food"></i>
+                                                            </div>
+                                                            <div class="col-6 text-center">
+                                                                <i class="fab fa-youtube video"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="u-clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-option morning">
+                            <div class="summary-section">
+                                <div class="flight-info">
+                                    <div class="airline-info">
+                                        <div class="logo">
+                                            <img src='images/airlines/spicejet.png' alt="">
+                                        </div>
+                                        <div class="text">
+                                            <a class="flight-name">Spicejet</a>
+                                            <div class="flight-number">204</div>
+                                        </div>
+                                    </div>
+                                    <div class="flight-summary">
+                                        <div class="left-wing">
+                                            <div class="city">New Delhi <span class="city-code">(DEL)</span></div>
+                                            <div class="time">16:10</div>
+                                        </div>
+                                        <div class="timeline-widget">
+                                            <div class="c-timeline-wrapper horizontal">
+                                                <div class="label tl first"></div>
+                                                <div class="label tl ">2Hr 20Min</div>
+                                                <div class="label tl last"></div>
+                                                <div class="c-timeline" id="stop">
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                    <div class="dot"></div>
+                                                </div>
+                                                <div class="label br first"></div>
+                                                <div class="label br ">1 stop</div>
+                                                <div class="label br last"></div>
+                                            </div>
+                                        </div>
+                                        <div class="right-wing">
+                                            <div class="city">Mumbai <span class="city-code">(BOM)</span></div>
+                                            <div class="time">18:20</div>
+                                        </div>
+                                        <div class="u-clear"></div>
+                                    </div>
+                                    <div class="detail-links null">
+                                        <label class="u-rfloat link" id="check" onClick="idSelect(1)" for="1">Flight Detail <i class="ti-angle-down"></i></label>
+                                        <input type="checkbox" name="" class="detail-check" id="1" value="1">
+                                        <div class="u-clear"></div>
+                                    </div>
+                                </div>
+                                <div class="provider-list">
+                                    <div class="fare-provider-list u-fb single-item">
+                                        <div class="list-item selected-fare">
+                                            <div class="price-section">
+                                                <div class="price">
+                                                    <div class="c-price-display u-text-ellipsis " title="">
+                                                        <img src="images/serviceprovider/kiwi.jpg" class="serviceprovider" alt="">
+                                                        <img src="images/rupee.svg" class="rupee" alt="">
+                                                        <span class="">10452</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="features u-ib"> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="preferred-provider">
+                                    <div class="preferred-provider-container">
+                                        <button class="btn btn-apply enabled">
+                                            Book
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail-section fd_1">
+                                <div class="nav-wrapper">
+                                    <span>
+                                        <div class="nav-list-item u-uppercase u-ib  selected" data="0">Flight Details</div>
+                                    </span>
+                                </div>
+                                <div class="flight-segment-detail">
+                                    <div class="accordion-item">
+                                        <div class="accordion-hdr ">
+                                            <div class="accordion-hdr-cntnt">
+                                                <div class="leg-summary">
+                                                    <div class="u-lfloat">New Delhi to Mumbai</div>
+                                                    <div class="u-rfloat">
+                                                        <div class="date">Sun, 24 Nov</div>
+                                                        <i class="fas fa-circle"></i>
+                                                        <div class="time">1hr 15min</div>
+                                                    </div>
+                                                    <div class="u-clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-body">
+                                            <div class="segment">
+                                                <div class="airline">
+                                                    <div class="logo">
+                                                        <img src="images/airlines/spicejet.png">
+                                                    </div>
+                                                    <div class="info">Go Air G8208</div>
+                                                    <div class="aircraft-info">A320-200</div>
+                                                    <div class="cabin-class">economy</div>
+                                                    <div class="aircraft-info">Narrow 3-3 (Limited seat tilt)</div>
+                                                    <div class="aircraft-info">Narrow</div>
+                                                </div>
+                                                <div class="segment2">
+                                                    <div class="flight-info">
+                                                        <div class="summary">
+                                                            <div class="left-wing">
+                                                                <div class="highlight">
+                                                                    <div class="city">Lucknow</div>
+                                                                    <div class="airport-code">(LKO)</div>
+                                                                </div>
+                                                                <div class="time"> 06:40</div>
+                                                                <div class="date">Sun, 24 Nov</div>
+                                                                <div class="airport u-text-ellipsis" title="Amausi Airport">Amausi Airport</div>
+                                                            </div>
+                                                            <div class="middle">
+                                                                <div class="icon ti-time"></div>
+                                                                <div class="duration">1hr 15min</div>
+                                                            </div>
+                                                            <div class="right-wing">
+                                                                <div class="highlight">
+                                                                    <div class="city">New Delhi</div>
+                                                                    <div class="airport-code">(DEL)</div>
+                                                                </div>
+                                                                <div class="time"> 07:55</div>
+                                                                <div class="date">Sun, 24 Nov</div>
+                                                                <div class="airport u-text-ellipsis" title="Indira Gandhi Intl Airport">Indira Gandhi Intl Airport</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="u-clear"></div>
+                                                    </div>
+                                                    <div class="baggage">
+                                                        <div class="row no-gutters">
+                                                            <div class="col-6 text-center border">
+                                                                <div class="heading">Cabin Baggage</div>
+                                                                <span class="weight">15 Kg</span>
+                                                            </div>
+                                                            <div class="col-6 text-center">
+                                                                <div class="heading">Check-in Baggage</div>
+                                                                <span class="weight">7 Kg</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="amenities">
+                                                        <div class="row">
+                                                            <div class="col-6 text-center">
+                                                                <i class="fas fa-wifi wifi available"></i>
+                                                            </div>
+                                                            <div class="col-6 text-center">
+                                                                <i class="fas fa-plug plug"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row align-self-center top-margin-20">
+                                                            <div class="col-6 text-center">
+                                                                <i class="fas fa-utensils food"></i>
+                                                            </div>
+                                                            <div class="col-6 text-center">
+                                                                <i class="fab fa-youtube video"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="u-clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        function valueChanged()
+        {
+            if($('.timefilter').is(":checked")){
+                fil = $(this).val();
+                console.log('anki');
+                $("."+fil).show();
+            } 
+            else{
+                var fil =  $(this).val(); 
+                $("."+fil).hide();
+            }
+        }
+    </script>
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>© 2019 Cheapexo Pvt. Ltd. India. All brands are trademarks of their respective owners.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+    	$(document).ready(function (){
+            $("#exchange").on('click',function(){
+                var pickup = $('#from').val();
+                $('#from').val($('#to').val());
+                $('#to').val(pickup);
+                var pickup1 = $('#from_airport_id').val();
+                $('#from_airport_id').val($('#to_airport_id').val());
+                $('#to_airport_id').val(pickup1);
+            });
+        });
+    </script>
+
+
+    <script>
+        var login = false;
+        $("#login").click(function() {
+            if(login==true){
+                $(".user-more-info").css('display','block');
+            }
+            else{
+                $(".login-model").css('display','flex');
+            }
+        });
+        $(".close").click(function() {
+            $(".login-model").css('display','none');
+        });
+        $(".signup-notify").click(function() {
+            $(".login-box").css('display','none');
+            $(".signup-box").css('display','block');
+        });
+        $(".signin-notify").click(function() {
+            $(".login-box").css('display','block');
+            $(".signup-box").css('display','none');
+        });
+
+        $(".input").focus(function(){
+            $(this).parent().addClass("focus");
+            }).blur(function(){
+                if($(this).val() ===''){
+                $(this).parent().removeClass("focus");
+            }
+        });
+
+    </script>
+
+
+
+
+<script>
+    function idSelect(fd){
+        var inputValue = fd;
+        $(".fd_" + inputValue).toggle();
+    };
+</script>
+    
+
+
+    <script>
+        $('.customers-slider').owlCarousel({
+            autoplay: true,
+            loop: true,
+            margin:25,
+            dots:false,
+            slideTransition:'linear',
+            autoplayTimeout:4000,
+            autoplayHoverPause:true,
+            autoplaySpeed:4000,
+            responsive:{
+                0:{
+                    items:1
+                },
+                500: {
+                    items:2
+                },
+                600:{
+                    items:3
+                },
+                800:{
+                    items:3
+                },
+                1200:{
+                    items:4
+                }
+
+            }
+
+        });
+    </script>
+
+
+    <script>
+        const input = document.getElementById('example');
+        const datepicker = new TheDatepicker.Datepicker(input);
+        datepicker.render();
+    </script>
+    <script>
+        const input2 = document.getElementById('example2');
+        const datepicker2 = new TheDatepicker.Datepicker(input2);
+        datepicker2.render();
+    </script>
+
+    <script>
+        $(document).ready(function(){
+          $("#oneway").click(function(){
+            $("#example2").prop('disabled', true);
+            $("#roundtrip").removeClass("active");
+            $("#oneway").addClass("active");
+          });
+          $("#roundtrip").click(function(){
+            $("#example2").prop('disabled', false);
+            $("#roundtrip").addClass("active");
+            $("#oneway").removeClass("active");
+          });
+          $("#return").click(function(){
+            $("#example2").prop('disabled', false);
+            $("#roundtrip").addClass("active");
+            $("#oneway").removeClass("active");
+          });
+          $("#passenger-box").click(function(){
+            $("#custombox").css('transform','scale(1)');
+          });
+          $("#close").click(function(){
+            $("#custombox").hide();
+          });
+          $("#passenger").click(function(){
+            $("#custombox").show();
+          });
+        });
+    </script>
+
+
+    <script type="text/javascript" src="js/cheapexo.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

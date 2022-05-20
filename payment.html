@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cheapexo - Flight Booking, Train Reservation, Hotels, Cheap Air Tickets</title>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#281483">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/the-datepicker.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script src="js/the-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="icon" href="images/icon.png" type="image"/>
+</head>
+<body class="dim-dark-background">
+    <header class="solid-back">
+        <a href="" class="site-name"><img src="images/cheapexo-dark.png" alt=""></a>
+        <nav>
+            <a href="index.html" class="link active"><i class="fas fa-plane-departure"></i>Fligths<span class="line"></span></a>
+            <a href="hotel.html" class="link"><i class="fas fa-hotel"></i>Hotels <span class="line"></span></a>
+            <a href="bus.html" class="link"><i class="fas fa-bus"></i>Buses <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-taxi"></i>Taxi <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-train"></i>Trains <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-ship"></i>Cruise <span class="line"></span></a>
+            <a href="helicopter.html" class="link"><i class="fas fa-helicopter"></i>Helicopter <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-taxi"></i>Air Taxi <span class="line"></span></a>
+            <a href="visa.html" class="link"><i class="fab fa-cc-visa"></i></i>Visa <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-gift"></i>Offers <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-pencil-alt"></i>Travel Stories <span class="line"></span></a>
+            <div class="dropdown">
+                <span class="dropbtn">More..</span>
+                <div class="dropdown-content">
+                    <a href="" class="drop-link">Forex</a>
+                    <a href="" class="drop-link">Anything</a>
+                </div>
+            </div>
+        </nav>
+        <div class="login" id="login">
+            <i class="fas fa-user-circle"></i>
+            <div class="user-more-info" id="user-more-info">
+                <div class="tip"></div>
+                <div class="item">Account</div>
+                <div class="item">Bookings</div>
+                <div class="item">Alerts</div>
+                <div class="item">Travellers</div>
+                <div class="item">Logout</div>
+            </div>
+        </div>
+        <div class="btnm">
+            <div class="btnmenu">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </div>
+        </div>
+    </header>
+    <div class="model login-model">g-18 webmock
+        <div class="login-box">
+            <div class="login-head">
+                <img src="images/close-light.svg" alt="" class="close">
+                <div class="form-title">Sign In</div>
+            </div>
+            <form class="login-body">
+                <div class="inputBox">
+                    <div class="inputText">USERNAME</div>
+                    <input type="text" name="username" class="input" id="username" required>
+                </div>
+                <div class="inputBox">
+                    <div class="inputText">PASSWORD</div>
+                    <input type="password" name="password" class="input" id="password" required>
+                </div>
+                <a href="forget.html" class="forget">Forget Password ?</a>
+                <div class="inputBox">
+                    <input type="submit"  class="btn-apply" value="LOGIN">
+                </div>
+                <span class="signup-notify">Don't have an account? <strong>SIGN UP</strong></span>
+            </form>
+        </div>
+        <div class="signup-box">
+                <div class="signup-head">
+                    <img src="images/close-light.svg" alt="" class="close">
+                    <div class="form-title">Sign Up</div>
+                </div>
+                <form class="signup-body">
+                    <div class="inputBox">
+                        <div class="inputText">Email / Mobile number</div>
+                        <input type="text" name="username" class="input" id="username" required>
+                    </div>
+                    <div class="inputBox">
+                        <div class="inputText">PASSWORD</div>
+                        <input type="password" name="password" class="input" id="password" required>
+                    </div>
+                    <div class="inputBox">
+                        <div class="inputText">CONFIRM PASSWORD</div>
+                        <input type="password" name="confirm-password" class="input" id="confirm-password" required>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit"  class="btn-apply" value="LOGIN">
+                    </div>
+                    <span class="signin-notify">Have an account? <strong>SIGN IN</strong></span>
+                </form>
+            </div>
+    </div>
+    <div class="pay-box">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="pay-bar-content">
+                        <div class="row">
+                            <div class="col-md-10 text-right align-self-center">
+                                <div class="text">AMOUNT TO PAY</div>
+                            </div>
+                            <div class="col-md-2 text-right align-self-center">
+                                <div class="price"><i class="fas fa-rupee-sign"></i>6785</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row top-margin-20">
+                <div class="col">
+                    <div class="pay-box-content">
+                        <div class="row no-gutters">
+                            <div class="col-sm-4">
+                                <div class="nav-option">
+                                    <div class="option active">
+                                        <i class="far fa-credit-card"></i>
+                                        <span>Credit/Debit Card</span>
+                                    </div>
+                                    <div class="option">
+                                        <i class="fas fa-university"></i>
+                                        <span>Net Banking</span>
+                                    </div>
+                                    <div class="option">
+                                        <i class="fas fa-wallet"></i>
+                                        <span>Wallet</span>
+                                    </div>
+                                    <div class="option">
+                                        <i class="far fa-money-bill-alt"></i>
+                                        <span>UPI</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-content h-100">
+                                    <div class="card-box h-100">
+                                        <form action="" class="card">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <input type="number" class="form-control" id="cardnumber" placeholder="Card Number">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <div class="form-group">
+                                                        <input type="number" class="form-control" id="expmonth" maxlength="2" placeholder="Exp MM">
+                                                        <span class="slace">/</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div class="form-group">
+                                                        <input type="number" class="form-control" id="expyear" maxlength="2" placeholder="YY">
+                                                    </div>
+                                                </div>
+                                                <div class="col-7">
+                                                    <div class="form-group">
+                                                        <input type="password" class="form-control" id="cvvnumber" maxlength="4" placeholder="CVV Number">
+                                                        <i class="far fa-credit-card credit"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" id="nameoncard" placeholder="Name on Card">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="description">This card will be secured safely for faster payment experience. CVV number will not be saved.</div>
+                                            <div class="pay-button text-right top-margin-20">
+                                                <button class="btn btn-apply">Pay</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>© 2019 Cheapexo Pvt. Ltd. India. All brands are trademarks of their respective owners.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $("#book-continue").click(function(){
+            $("#flight-detail").hide();
+            $("#contact-group").hide();
+            $("#booking-review-summary").show();
+            $("#traveller-detail").show();
+            $(".first").removeClass("current");
+            $(".first").addClass("completed");
+            $(".middle").addClass("current");
+            $("#book-continue").hide();
+            $("#pay").show();
+        });
+        $("#modify").click(function(){
+            $("#flight-detail").show();
+            $("#contact-group").show();
+            $("#booking-review-summary").hide();
+            $("#traveller-detail").hide();
+            $(".first").removeClass("completed");
+            $(".first").addClass("current");
+            $(".middle").removeClass("current");
+            $("#book-continue").show();
+            $("#pay").hide();
+        });
+    </script>
+
+    <script>
+        $(".baggage-nav").click(function() {
+            $(this).addClass('selected');
+            $(".baggage").css('display','block');
+            $(".fare-rule").css('display','none');
+            $(".terms").css('display','none');
+            $(".fare-rule-nav").removeClass('selected');
+            $(".terms-nav").removeClass('selected');
+        });
+        $(".fare-rule-nav").click(function() {
+            $(this).addClass('selected');
+            $(".fare-rule").css('display','block');
+            $(".baggage").css('display','none');
+            $(".terms").css('display','none');
+            $(".baggage-nav").removeClass('selected');
+            $(".terms-nav").removeClass('selected');
+        });
+        $(".terms-nav").click(function() {
+            $(this).addClass('selected');
+            $(".terms").css('display','block');
+            $(".baggage").css('display','none');
+            $(".fare-rule").css('display','none');
+            $(".baggage-nav").removeClass('selected');
+            $(".fare-rule-nav").removeClass('selected');
+        });
+        $(".close-icon").click(function() {
+            $(".baggage").css('display','none');
+            $(".fare-rule").css('display','none');
+            $(".terms").css('display','none');
+            $(".baggage-nav").removeClass('selected');
+            $(".fare-rule-nav").removeClass('selected');
+            $(".terms-nav").removeClass('selected');
+        });
+    </script>
+
+    <script>
+        $(".down-icon").click(function() {
+            $(".down-icon").css('display','none');
+            $(".up-icon").css('display','block');
+            $(".show").show();
+        });
+        $(".up-icon").click(function() {
+            $(".up-icon").css('display','none');
+            $(".down-icon").css('display','block');
+            $(".show").hide();
+        });
+    </script>
+
+    <script>
+        var login = false;
+        $("#login").click(function() {
+            if(login==true){
+                $(".user-more-info").css('display','block');
+            }
+            else{
+                $(".login-model").css('display','flex');
+            }
+        });
+        $(".close").click(function() {
+            $(".login-model").css('display','none');
+        });
+        $(".signup-notify").click(function() {
+            $(".login-box").css('display','none');
+            $(".signup-box").css('display','block');
+        });
+        $(".signin-notify").click(function() {
+            $(".login-box").css('display','block');
+            $(".signup-box").css('display','none');
+        });
+
+        $(".input").focus(function(){
+            $(this).parent().addClass("focus");
+            }).blur(function(){
+                if($(this).val() ===''){
+                $(this).parent().removeClass("focus");
+            }
+        });
+
+    </script>
+
+
+
+
+
+
+
+    <script type="text/javascript" src="js/cheapexo.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

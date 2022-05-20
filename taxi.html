@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cheapexo - Flight Booking, Train Reservation, Hotels, Cheap Air Tickets</title>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#281483">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/the-datepicker.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script src="js/the-datepicker.js"></script>
+    <link rel="icon" href="images/icon.png" type="image"/>
+</head>
+<body>
+    <header>
+        <a href="" class="site-name"><img src="images/cheapexo-light.png" alt="" class="light-logo"><img src="images/cheapexo-dark.png" alt="" class="dark-logo"></a>
+        <nav>
+            <a href="index.html" class="link"><i class="fas fa-plane-departure"></i>Fligths<span class="line"></span></a>
+            <a href="hotel.html" class="link"><i class="fas fa-hotel"></i>Hotels <span class="line"></span></a>
+            <a href="bus.html" class="link"><i class="fas fa-bus"></i>Buses <span class="line"></span></a>
+            <a href="taxi.html" class="link active"><i class="fas fa-taxi"></i>Taxi <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-train"></i>Trains <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-ship"></i>Cruise <span class="line"></span></a>
+            <a href="helicopter.html" class="link"><i class="fas fa-helicopter"></i>Helicopter <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-taxi"></i>Air Taxi <span class="line"></span></a>
+            <a href="visa.html" class="link"><i class="fab fa-cc-visa"></i></i>Visa <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-gift"></i>Offers <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-pencil-alt"></i>Travel Stories <span class="line"></span></a>
+            <div class="dropdown">
+                <span class="dropbtn">More..</span>
+                <div class="dropdown-content">
+                    <a href="" class="drop-link">Forex</a>
+                    <a href="" class="drop-link">Anything</a>
+                </div>
+            </div>
+        </nav>
+        <div class="login" id="login">
+            <i class="fas fa-user-circle"></i>
+            <div class="user-more-info" id="user-more-info">
+                <div class="tip"></div>
+                <div class="item">Account</div>
+                <div class="item">Bookings</div>
+                <div class="item">Alerts</div>
+                <div class="item">Travellers</div>
+                <div class="item">Logout</div>
+            </div>
+        </div>
+        <div class="btnm">
+            <div class="btnmenu">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </div>
+        </div>
+    </header>
+    <div class="model login-model">
+        <div class="login-box">
+            <div class="login-head">
+                <img src="images/close-light.svg" alt="" class="close">
+                <div class="form-title">Sign In</div>
+            </div>
+            <form class="login-body">
+                <div class="inputBox">
+                    <div class="inputText">USERNAME</div>
+                    <input type="text" name="username" class="input" id="username" required>
+                </div>
+                <div class="inputBox">
+                    <div class="inputText">PASSWORD</div>
+                    <input type="password" name="password" class="input" id="password" required>
+                </div>
+                <a href="forget.html" class="forget">Forget Password ?</a>
+                <div class="inputBox">
+                    <input type="submit"  class="btn-apply" value="LOGIN">
+                </div>
+                <span class="signup-notify">Don't have an account? <strong>SIGN UP</strong></span>
+            </form>
+        </div>
+        <div class="signup-box">
+            <div class="signup-head">
+                <img src="images/close-light.svg" alt="" class="close">
+                <div class="form-title">Sign Up</div>
+            </div>
+            <form class="signup-body">
+                <div class="inputBox">
+                    <div class="inputText">Email / Mobile number</div>
+                    <input type="text" name="username" class="input" id="username" required>
+                </div>
+                <div class="inputBox">
+                    <div class="inputText">PASSWORD</div>
+                    <input type="password" name="password" class="input" id="password" required>
+                </div>
+                <div class="inputBox">
+                    <div class="inputText">CONFIRM PASSWORD</div>
+                    <input type="password" name="confirm-password" class="input" id="confirm-password" required>
+                </div>
+                <div class="inputBox">
+                    <input type="submit"  class="btn-apply" value="LOGIN">
+                </div>
+                <span class="signin-notify">Have an account? <strong>SIGN IN</strong></span>
+            </form>
+        </div>
+    </div>
+    <div class="slide_wrapper">
+    	<div class="owl-carousel">
+    		<img src="images/slider/banner.webp">
+    		<img src="images/slider/banner2.webp">
+    		<img src="images/slider/banner3.webp">
+    		<img src="images/slider/banner4.webp">
+    		<img src="images/slider/banner5.webp">
+    		<img src="images/slider/banner6.webp">
+    		<img src="images/slider/banner7.webp">
+    		<img src="images/slider/banner8.webp">
+    		<img src="images/slider/banner9.webp">
+    		<img src="images/slider/banner10.webp">
+    		<img src="images/slider/banner11.webp">
+    		<img src="images/slider/banner12.webp">
+    	</div>
+    	<script>
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                animateOut: 'fadeOut',
+                items:1,
+                loop:true,
+                margin:0,
+                autoplay:true,
+                autoplayTimeout:4000,
+                autoplayHoverPause:false
+            });
+            $('.play').on('click',function(){
+                owl.trigger('play.owl.autoplay',[1000])
+            })
+            $('.stop').on('click',function(){
+                owl.trigger('stop.owl.autoplay')
+            })
+        </script>
+    </div>
+    <div class="search-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="tag-line"> Compare Best!!<span> Get Cheapest!! </span></div>
+                    <div class="nav">
+                        <span class="option active" id="oneway">One Way <span class="line"></span></span>
+                        <span class="option" id="roundtrip">Round Trip <span class="line"></span></span>
+                        <a href="#explore2" class="option" id="explore">Explore <span class="line"></span></a>
+                    </div>
+                    <div class="form-box">
+                        <form action="" method="post" name="flightsearch" onsubmit="return validateform()" autocomplete="off">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-content">
+                                        <label for="fromF">From:</label>
+                                        <input type="text" name="frominput" value='' id="from" class="frominput" placeholder="Enter City or Airport" onfocus="document.getElementById('fromvalidate').style.display = 'none'">
+                                        <input type='hidden'     name='from_airport_id' id='from_airport_id'>
+                                        <span class="validation" id="fromvalidate">Please Enter Departure Airport <span class="valid-clip"></span></span>
+                                        <div class="from_main_div" id="from_main_div"></div> 
+                                        <div class="exchange" id="exchange"><i class="fas fa-exchange-alt"></i></div>                            
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-content">
+                                        <label for="toF">To:</label>
+                                        <input type="text" name="toinput" value='' id="to" class="toinput" placeholder="Enter City or Airport" onfocus="document.getElementById('tovalidate').style.display = 'none'">
+                                        <input type='hidden' value='' name='to_airport_id' id='to_airport_id'>
+                                        <span class="validation" id="tovalidate">Please Enter Arrival Airport <span class="valid-clip"></span></span>
+                                        <div class="to_main_div" id="to_main_div"></div> 
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-content">
+                                        <label for="example">Departure</label>
+                                        <input type="text" name="departure" id="example" class="datepicker" placeholder="Departure">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-content" id="return">
+                                        <label for="example2">Return</label>
+                                        <input type="text" name="return" id="example2" class="datepicker" placeholder="Return">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-content" id="passenger-box">
+                                        <label for="passenger">Travellers | Class </label>
+                                        <input  id="passenger" class="passenger" type="text" value="1 passanger, Economy">
+                                        <div class="custombox" id="custombox">
+                                            <span class="close-travel-box" id="closetravelbox"><img src="images/close.svg" id="close" alt=""></span>
+                                            <div class="row no-gutters">
+                                                <div class="col-md-6 border">
+                                                    <div class="head">Travellers<span class="valid-clip"></span></div>
+                                                    <div class="adult">
+                                                        <span class="name">Adult<br><strong>(12+ yr)</strong></span>
+                                                        <button type="button" class="btn-counter" onClick="minusadult()">-</button>
+                                                        <input type="text" name="adult" class="text-counter" id="adult" value="1" onchange="passangercount()">
+                                                        <button type="button" class="btn-counter" onClick="plusadult()">+</button>
+                                                        <script type="text/javascript">
+                                                            function minusadult() {
+                                                              var adult = parseInt(document.getElementById("adult").value);
+                                                              if(adult <= 1){
+                                                                return false;
+                                                              }
+                                                              else{
+                                                                adult -= 1;
+                                                                document.getElementById("adult").value = adult;
+                                                                var infant = parseInt(document.getElementById("infant").value);
+                                                                if(infant > adult){
+                                                                    infant -= 1
+                                                                    document.getElementById("infant").value = infant;
+                                                                    passangercount();
+                                                                }
+                                                                passangercount();
+                                                              }
+                                                                
+                                                            };
+                                                            function plusadult() {
+                                                                var adult = parseInt(document.getElementById("adult").value);
+                                                                if(adult < 9){
+                                                                  adult += 1;
+                                                                  document.getElementById("adult").value = adult;
+                                                                  passangercount();
+                                                                }
+                                                                else{
+                                                                  return false;
+                                                                }
+                                                            };
+                                                        </script>
+                                                    </div>
+                                                    <div class="adult">
+                                                        <span class="name">Child<br><strong>(2-11 yr)</strong></span>
+                                                        <button type="button" class="btn-counter" onClick="minuschild()">-</button>
+                                                        <input type="text" name="child" class="text-counter" id="child" value="0" onchange="passangercount()" readonly>
+                                                        <button type="button" class="btn-counter" onClick="pluschild()">+</button>
+                                                        <script type="text/javascript">
+                                                            function minuschild() {
+                                                              var child = parseInt(document.getElementById("child").value);
+                                                              if(child <= 0){
+                                                                return false;
+                                                              }
+                                                              else{
+                                                                child -= 1
+                                                                document.getElementById("child").value = child;
+                                                                passangercount();
+                                                              }
+                                                                
+                                                            };
+                                                            function pluschild() {
+                                                                var child = parseInt(document.getElementById("child").value);
+                                                                if(child < 9){
+                                                                  child += 1
+                                                                  document.getElementById("child").value = child;
+                                                                passangercount();
+                                                                }
+                                                                else{
+                                                                  return false;
+                                                                }
+                                                            };
+                                                        </script>
+                                                    </div>
+                                                    <div class="adult">
+                                                        <span class="name">Infant<br><strong>(0-2 yr)</strong></span>
+                                                        <button type="button" class="btn-counter" onClick="minusinfant()">-</button>
+                                                        <input type="text" name="infant" class="text-counter" id="infant" value="0" onchange="passangercount()" readonly>
+                                                        <button type="button" class="btn-counter" onClick="plusinfant()">+</button>
+                                                        <script type="text/javascript">
+                                                            function minusinfant() {
+                                                              var infant = parseInt(document.getElementById("infant").value);
+                                                              if(infant <= 0){
+                                                                return false;
+                                                              }
+                                                              else{
+                                                                infant -= 1
+                                                                document.getElementById("infant").value = infant;
+                                                                passangercount();
+                                                              }
+                                                                
+                                                            };
+                                                            function plusinfant() {
+                                                                var infant = parseInt(document.getElementById("infant").value);
+                                                                var adult = parseInt(document.getElementById("adult").value);
+                                                                if(infant < adult){
+                                                                  infant += 1
+                                                                  document.getElementById("infant").value = infant;
+                                                                  passangercount();
+                                                                }
+                                                                else{
+                                                                  return false;
+                                                                }
+                                                            };
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="head">Class</div>
+                                                    <label class="container">Economy
+                                                        <input type="radio" checked="checked" name="class" value="M" onchange="passangercount()">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="container">Premium Economy
+                                                        <input type="radio" name="class" value="W" onchange="passangercount()">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="container">Business
+                                                        <input type="radio" name="class" value="C" onchange="passangercount()">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <script> 
+                                                        function passangercount() {
+                                                          var adult, child, infant, classtype, count, passanger ;
+                                                          adult = parseInt(document.getElementById('adult').value);
+                                                          child = parseInt(document.getElementById('child').value);
+                                                          infant = parseInt(document.getElementById('infant').value);
+                                                          //alert(adult+child+infant);
+                                                          var ele4 = document.getElementsByName('class'); 
+                                                            var classtype;
+                                                            for(i = 0; i < ele4.length; i++) { 
+                                                                if(ele4[i].checked) 
+                                                                classtype = ele4[i].value;
+                                                            }
+                                                            if(classtype=='M'){
+                                                                classtype = 'Economy';
+                                                            }
+                                                            else if(classtype=='W'){
+                                                                classtype = 'Premium Economy';
+                                                            }
+                                                            else if(classtype=='C'){
+                                                                classtype = 'Business';
+                                                            }
+                                                          count = adult + child + infant;
+                                                          if(count <= 1){
+                                                            passanger = count + ' Passanger, ' + classtype;
+                                                          }
+                                                          else{
+                                                            passanger = count + ' Passangers, ' + classtype;
+                                                            }
+                                                          $('#passenger').val('') ; 
+                                                          $('#passenger').val(passanger)
+                                                        }
+                                                    </script> 
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 text-center align-self-center">
+                                    <input type="submit" class="btn btn-apply" value="SEARCH">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="offer">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="container">
+
+            <div class="row">
+                <div class="col text-center">
+                    <p>Compare Flights From Across 100+ Travel Sites In One Place</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="owl-carousel">
+                        <img src="images/partner/1.webp" class="partner" alt="" style="width: 165px;padding: 12px 10px;">
+                        <img src="images/partner/2.webp" class="partner" alt="" style="width: 125px;padding: 22px 10px;">
+                        <img src="images/partner/3.webp" class="partner" alt="" style="width: 165px;padding: 13px 10px;">
+                        <img src="images/partner/4.webp" class="partner" alt="" style="width: 152px;padding: 13px 10px;">
+                        <img src="images/partner/5.webp" class="partner" alt="" style="width: 152px;padding: 16px 10px;">
+                        <img src="images/partner/6.webp" class="partner" alt="" style="width: 100px;padding: 25px 10px;">
+                    </div>
+                    <script>
+                        var owl = $('.owl-carousel');
+                        owl.owlCarousel({
+                            animateOut: 'fadeOut',
+                            items:1,
+                            loop:true,
+                            margin:0,
+                            autoplay:true,
+                            autoplayTimeout:4000,
+                            autoplayHoverPause:false,
+                            responsive:{
+                                0:{
+                                    items:2
+                                },
+                                500: {
+                                    items:3
+                                },
+                                600:{
+                                    items:4
+                                },
+                                800:{
+                                    items:4
+                                },
+                                1200:{
+                                    items:6
+                                }
+                            
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="slider">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h5>Best Flight, Train & Hotel Deals</h5>
+                </div>
+            </div>
+            <div class="row top-margin-20">
+                <div class="col">
+                    <div class="customers-content">
+                        <div class="owl-carousel owl-theme customers-slider">
+                            <div class="item">
+                                <img src="images/offer/1.webp" alt="client logo">
+                            </div>
+                            <div class="item">
+                                <img src="images/offer/2.webp" alt="client logo">
+                            </div>
+                            <div class="item">
+                                <img src="images/offer/3.webp" alt="client logo">
+                            </div>
+                            <div class="item">
+                                <img src="images/offer/4.webp" alt="client logo">
+                            </div>
+                            <div class="item">
+                                <img src="images/offer/5.webp" alt="client logo">
+                            </div>
+                            <div class="item">
+                                <img src="images/offer/6.webp" alt="client logo">
+                            </div>
+                            <div class="item">
+                                <img src="images/offer/7.webp" alt="client logo">
+                            </div>
+                            <div class="item">
+                                <img src="images/offer/8.webp" alt="client logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="explore" id="explore2">
+        <div class="box">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="head">Best Flight Deals Of The Day</div>
+                    </div>
+                </div>
+                <div class="row top-margin-40">
+                    <div class="col-md-4 top-margin-40">
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="images/adventure/banner.webp" alt="">
+                            </div>
+                            <div class="card-foot">
+                                <div class="flight-card-detail">
+                                    <div class="city-airport-cntr">
+                                        <div class="city-cntr" title="Dubai">Dubai</div>
+                                        <div class="airport-cntr">
+                                            <span class="aiport">DEL</span> 
+                                            <span class="right-arrow">
+                                                <i class="ti-arrow-right" aria-hidden="true"></i>
+                                            </span> 
+                                            <span class="aiport">DXB</span>
+                                        </div>
+                                    </div>
+                                    <div class="price-date-cntr">
+                                        <div class="price-cntr">
+                                            <a class="price-link" href="#" rel="" target="_blank">
+                                                <div class="text">from</div>
+                                                <div class="c-price-display" title="">
+                                                    <span class=""> <img src="images/rupee.svg" alt="" class="rupee"> 6975</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="date-cntr">18 Dec 2019</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 top-margin-40">
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="images/adventure/banner5.webp" alt="">
+                            </div>
+                            <div class="card-foot">
+                                <div class="flight-card-detail">
+                                    <div class="city-airport-cntr">
+                                        <div class="city-cntr" title="Dubai">New York</div>
+                                        <div class="airport-cntr">
+                                            <span class="aiport">DEL</span> 
+                                            <span class="right-arrow">
+                                                <i class="ti-arrow-right" aria-hidden="true"></i>
+                                            </span> 
+                                            <span class="aiport">NYC</span>
+                                        </div>
+                                    </div>
+                                    <div class="price-date-cntr">
+                                        <div class="price-cntr">
+                                            <a class="price-link" href="#" rel="" target="_blank">
+                                                <div class="text">from</div>
+                                                <div class="c-price-display" title="">
+                                                    <span class=""> <img src="images/rupee.svg" alt="" class="rupee"> 30570</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="date-cntr">18 Nov 2019</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 top-margin-40">
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="images/adventure/banner6.webp" alt="">
+                            </div>
+                            <div class="card-foot">
+                                <div class="flight-card-detail">
+                                    <div class="city-airport-cntr">
+                                        <div class="city-cntr" title="Dubai">London</div>
+                                        <div class="airport-cntr">
+                                            <span class="aiport">DEL</span> 
+                                            <span class="right-arrow">
+                                                <i class="ti-arrow-right" aria-hidden="true"></i>
+                                            </span> 
+                                            <span class="aiport">LON</span>
+                                        </div>
+                                    </div>
+                                    <div class="price-date-cntr">
+                                        <div class="price-cntr">
+                                            <a class="price-link" href="#" rel="" target="_blank">
+                                                <div class="text">from</div>
+                                                <div class="c-price-display" title="">
+                                                    <span class=""> <img src="images/rupee.svg" alt="" class="rupee"> 17267</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="date-cntr">21 Oct 2019</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 top-margin-40">
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="images/adventure/banner7.webp" alt="">
+                            </div>
+                            <div class="card-foot">
+                                <div class="flight-card-detail">
+                                    <div class="city-airport-cntr">
+                                        <div class="city-cntr" title="Dubai">Dubai</div>
+                                        <div class="airport-cntr">
+                                            <span class="aiport">DEL</span> 
+                                            <span class="right-arrow">
+                                                <i class="ti-arrow-right" aria-hidden="true"></i>
+                                            </span> 
+                                            <span class="aiport">DXB</span>
+                                        </div>
+                                    </div>
+                                    <div class="price-date-cntr">
+                                        <div class="price-cntr">
+                                            <a class="price-link" href="#" rel="" target="_blank">
+                                                <div class="text">from</div>
+                                                <div class="c-price-display" title="">
+                                                    <span class=""> <img src="images/rupee.svg" alt="" class="rupee"> 6975</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="date-cntr">18 Dec 2019</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 top-margin-40">
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="images/adventure/banner8.webp" alt="">
+                            </div>
+                            <div class="card-foot">
+                                <div class="flight-card-detail">
+                                    <div class="city-airport-cntr">
+                                        <div class="city-cntr" title="Dubai">New York</div>
+                                        <div class="airport-cntr">
+                                            <span class="aiport">DEL</span> 
+                                            <span class="right-arrow">
+                                                <i class="ti-arrow-right" aria-hidden="true"></i>
+                                            </span> 
+                                            <span class="aiport">NYC</span>
+                                        </div>
+                                    </div>
+                                    <div class="price-date-cntr">
+                                        <div class="price-cntr">
+                                            <a class="price-link" href="#" rel="" target="_blank">
+                                                <div class="text">from</div>
+                                                <div class="c-price-display" title="">
+                                                    <span class=""> <img src="images/rupee.svg" alt="" class="rupee"> 30570</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="date-cntr">18 Nov 2019</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 top-margin-40">
+                        <div class="card">
+                            <div class="card-head">
+                                <img src="images/adventure/banner9.webp" alt="">
+                            </div>
+                            <div class="card-foot">
+                                <div class="flight-card-detail">
+                                    <div class="city-airport-cntr">
+                                        <div class="city-cntr" title="Dubai">London</div>
+                                        <div class="airport-cntr">
+                                            <span class="aiport">DEL</span> 
+                                            <span class="right-arrow">
+                                                <i class="ti-arrow-right" aria-hidden="true"></i>
+                                            </span> 
+                                            <span class="aiport">LON</span>
+                                        </div>
+                                    </div>
+                                    <div class="price-date-cntr">
+                                        <div class="price-cntr">
+                                            <a class="price-link" href="#" rel="" target="_blank">
+                                                <div class="text">from</div>
+                                                <div class="c-price-display" title="">
+                                                    <span class=""> <img src="images/rupee.svg" alt="" class="rupee"> 17267</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="date-cntr">21 Oct 2019</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>© 2019 Cheapexo Pvt. Ltd. India. All brands are trademarks of their respective owners.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            passangercount();
+        };
+    </script>
+
+    <script>
+    	$(document).ready(function (){
+            $("#exchange").on('click',function(){
+                var pickup = $('#from').val();
+                $('#from').val($('#to').val());
+                $('#to').val(pickup);
+                var pickup1 = $('#from_airport_id').val();
+                $('#from_airport_id').val($('#to_airport_id').val());
+                $('#to_airport_id').val(pickup1);
+            });
+        });
+    </script>
+
+
+    <script>
+        var login = false;
+        $("#login").click(function() {
+            if(login==true){
+                $(".user-more-info").css('display','block');
+            }
+            else{
+                $(".login-model").css('display','flex');
+            }
+        });
+        $(".close").click(function() {
+            $(".login-model").css('display','none');
+        });
+        $(".signup-notify").click(function() {
+            $(".login-box").css('display','none');
+            $(".signup-box").css('display','block');
+        });
+        $(".signin-notify").click(function() {
+            $(".login-box").css('display','block');
+            $(".signup-box").css('display','none');
+        });
+
+        $(".input").focus(function(){
+            $(this).parent().addClass("focus");
+            }).blur(function(){
+                if($(this).val() ===''){
+                $(this).parent().removeClass("focus");
+            }
+        });
+
+    </script>
+
+    <script>
+        function validateform(){
+        var fromairport=document.flightsearch.from_airport_id.value;  
+        var toairport=document.flightsearch.to_airport_id.value;  
+                
+        if (fromairport==null || fromairport==''){  
+          document.getElementById("fromvalidate").style.display = "block";  
+          //$("#fromvalidate").focus();
+          return false; 
+        }
+        else if(toairport==null || toairport==""){  
+          document.getElementById("tovalidate").style.display = "block";  
+          return false;  
+          }  
+        } 
+    </script>
+
+
+    <script>
+        $(document).ready(function(){       
+            var scroll_pos = 0;
+            $(document).scroll(function() { 
+                scroll_pos = $(this).scrollTop();
+                if(scroll_pos > 60) {
+                    $("header").addClass('solid-back');
+                    //$(".light-logo").css('display','none');
+                    //$(".dark-logo").css('display','block');
+                } 
+                else{
+                    $("header").removeClass('solid-back');
+                    //$(".light-logo").css('display','block');
+                    //$(".dark-logo").css('display','none');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $('.customers-slider').owlCarousel({
+            autoplay: true,
+            loop: true,
+            margin:25,
+            dots:false,
+            slideTransition:'linear',
+            autoplayTimeout:4000,
+            autoplayHoverPause:true,
+            autoplaySpeed:4000,
+            responsive:{
+                0:{
+                    items:1
+                },
+                500: {
+                    items:2
+                },
+                600:{
+                    items:3
+                },
+                800:{
+                    items:3
+                },
+                1200:{
+                    items:4
+                }
+
+            }
+
+        });
+    </script>
+
+
+    <script>
+        const input = document.getElementById('example');
+        const datepicker = new TheDatepicker.Datepicker(input);
+        datepicker.render();
+    </script>
+    <script>
+        const input2 = document.getElementById('example2');
+        const datepicker2 = new TheDatepicker.Datepicker(input2);
+        datepicker2.render();
+    </script>
+
+    <script>
+        $(document).ready(function(){
+          $("#oneway").click(function(){
+            $("#example2").prop('disabled', true);
+            $("#roundtrip").removeClass("active");
+            $("#oneway").addClass("active");
+          });
+          $("#roundtrip").click(function(){
+            $("#example2").prop('disabled', false);
+            $("#roundtrip").addClass("active");
+            $("#oneway").removeClass("active");
+          });
+          $("#return").click(function(){
+            $("#example2").prop('disabled', false);
+            $("#roundtrip").addClass("active");
+            $("#oneway").removeClass("active");
+          });
+          $("#passenger-box").click(function(){
+            $("#custombox").css('transform','scale(1)');
+          });
+          $("#close").click(function(){
+            $("#custombox").hide();
+          });
+          $("#passenger").click(function(){
+            $("#custombox").show();
+          });
+        });
+    </script>
+
+
+    <script type="text/javascript" src="js/cheapexo.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

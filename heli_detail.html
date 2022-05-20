@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cheapexo - Flight Booking, Train Reservation, Hotels, Cheap Air Tickets</title>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#281483">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/the-datepicker.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script src="js/the-datepicker.js"></script>
+    <link rel="icon" href="images/icon.png" type="image"/>
+</head>
+<body>
+    <header class="solid-back">
+        <a href="" class="site-name"><img src="images/cheapexo-light.png" alt="" class="light-logo"><img src="images/cheapexo-dark.png" alt="" class="dark-logo"></a>
+        <nav>
+            <a href="index.html" class="link"><i class="fas fa-plane-departure"></i>Fligths<span class="line"></span></a>
+            <a href="hotel.html" class="link"><i class="fas fa-hotel"></i>Hotels <span class="line"></span></a>
+            <a href="bus.html" class="link"><i class="fas fa-bus"></i>Buses <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-taxi"></i>Taxi <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-train"></i>Trains <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-ship"></i>Cruise <span class="line"></span></a>
+            <a href="helicopter.html" class="link active"><i class="fas fa-helicopter"></i>Helicopter <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-taxi"></i>Air Taxi <span class="line"></span></a>
+            <a href="visa.html" class="link"><i class="fab fa-cc-visa"></i></i>Visa <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-gift"></i>Offers <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-pencil-alt"></i>Travel Stories <span class="line"></span></a>
+            <div class="dropdown">
+                <span class="dropbtn">More..</span>
+                <div class="dropdown-content">
+                    <a href="" class="drop-link">Forex</a>
+                    <a href="" class="drop-link">Anything</a>
+                </div>
+            </div>
+        </nav>
+        <div class="login" id="login">
+            <i class="fas fa-user-circle"></i>
+            <div class="user-more-info" id="user-more-info">
+                <div class="tip"></div>
+                <div class="item">Account</div>
+                <div class="item">Bookings</div>
+                <div class="item">Alerts</div>
+                <div class="item">Travellers</div>
+                <div class="item">Logout</div>
+            </div>
+        </div>
+        <div class="btnm">
+            <div class="btnmenu">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </div>
+        </div>
+    </header>
+    <div class="model login-model">
+        <div class="login-box">
+            <div class="login-head">
+                <img src="images/close-light.svg" alt="" class="close">
+                <div class="form-title">Sign In</div>
+            </div>
+            <form class="login-body">
+                <div class="inputBox">
+                    <div class="inputText">USERNAME</div>
+                    <input type="text" name="username" class="input" id="username" required>
+                </div>
+                <div class="inputBox">
+                    <div class="inputText">PASSWORD</div>
+                    <input type="password" name="password" class="input" id="password" required>
+                </div>
+                <a href="forget.html" class="forget">Forget Password ?</a>
+                <div class="inputBox">
+                    <input type="submit"  class="btn-apply" value="LOGIN">
+                </div>
+                <span class="signup-notify">Don't have an account? <strong>SIGN UP</strong></span>
+            </form>
+        </div>
+        <div class="signup-box">
+                <div class="signup-head">
+                    <img src="images/close-light.svg" alt="" class="close">
+                    <div class="form-title">Sign Up</div>
+                </div>
+                <form class="signup-body">
+                    <div class="inputBox">
+                        <div class="inputText">Email / Mobile number</div>
+                        <input type="text" name="username" class="input" id="username" required>
+                    </div>
+                    <div class="inputBox">
+                        <div class="inputText">PASSWORD</div>
+                        <input type="password" name="password" class="input" id="password" required>
+                    </div>
+                    <div class="inputBox">
+                        <div class="inputText">CONFIRM PASSWORD</div>
+                        <input type="password" name="confirm-password" class="input" id="confirm-password" required>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit"  class="btn-apply" value="LOGIN">
+                    </div>
+                    <span class="signin-notify">Have an account? <strong>SIGN IN</strong></span>
+                </form>
+            </div>
+    </div>
+
+    <section class="helicopter-detail">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="heli-detail-box">
+                        <div class="heading">Chardham Yatra</div>
+                        <div class="brief-description">Char Dham Yatra by Helicopter Ex-Dehradun</div>
+                        <div class="content">
+                            <p>Chardham Yatra of Uttrakhand is termed to be one of the best spiritual tours among Hindus. Pilgrimage to chardham yatra begins from Yamunotri Temple, the westernmost shrine in the Garhwal region dedicated to the Goddess Yamuna, before proceeding to Gangotri Temple which is devoted to Goddess Ganga, and then further moves to Kedarnath temple which stands as one of the 12 “Jyotirlingas” of Lord Shiva and finally concludes at Badrinath temple which is devoted to Lord Vishnu which is one of “Char Dham of India”. It believed to be a journey for the salvation.</p>
+                            <h5>DAY 01- DEHRADUN</h5>
+                            <p>We welcome you for best luxury chardham tour by helicopter trip 2020. This chardham trip start with Pick-up from Dehradun Airport/ railway station/ Hotel and transfer to Hotel at Dehradun. Overnight stay at Dehradun hotel.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="image-box">
+                        <img src="images/helicopter/chardham.webp" alt="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="content">
+                        <h5>DAY 02 -  YAMUNOTRI DARSHAN</h5>
+                        <p>
+                            Early morning picks up from Dehradun hotel and transfer to Sahastradhara helipad of uttrakhand government for most convenient, relaxed and luxury trip of chardham by helicopter 2020. On arrival meet and greet by our crew member and support staff. Briefing about chardham yatra by helicopter 20 will done here and you will board helicopter and fly for Barkot / Kaharsali. <br><br>
+                            Our experienced pilots, crew and support staff will brief all our guest <br><br>
+                            (Pilgrims) about functions of complete char dham tour by helicopter for 2020. Along with that our team will brief our pilgrims of do’s and don’ts of chardham trip by helicopter.<br><br>
+                            Upon   arrival   at   Barkot (The   helipad   for   Yamunotri) passengers   are welcomed by ground support staff of Barkot helipad, who will unload pilgrims bags and carry it to our one of best hotel in Kharshali. Breakfast is arranged here at hotel. <br><br>
+                            Yamunotri temple is a 6 kms away from Jankichatti. From Jankichatti trek for yamuntri dham start. We provide palki for this 6 kms. Normally this complete yatra of yamunotri dham take around 6 hr. On arrival at temple vip special darshan is arranges for our chardham trip by helicopter guest.  After darshan same way return to hotel. Hot serves lunch will be provided at hotel.After rest, we arrange a darshan of Shani Temple, that is near to the Hotel.
+                        </p>
+                        <h5>DAY 3 – GANGOTRI DHAM DARSHAN</h5>
+                        <p>
+                            After 45-minute flying through majestic range of shivalik hills of himalyan range. Chardham helicopter will land in Harsil, upon arrival at  Harsil  helipad for Gangotri dham,  pilgrims will  be  received  by  our ground representative at helipad and they carry luggage to resort in Harsil. Resort is only 2kms from the harsil helipad of Uttrakhand. <br><br>
+                            Harsil valley is one of the most beautiful valleys in Uttrakhand and famous for its mesmerizing valley view. Lots of visitor named it as mini Switzerland of india in uttrakhand.  Gangotri temple is around 22 kms from Harsil resort. After breakfast we  will take pilgrims by car to Gangotri Temple. VIP dardhan is in gangotri temple for hassle free chardham by helicopter. <br><br>
+                            Our very co-operative team always take care of our passengers throughout their stay at   Gangotri dham.  We provide all the facilities for our tourists which includes best accommodation available here. Hot served delicious vegetarian breakfast, lunch and dinner at resort. Enjoy your night with bonfire in this beautiful valley along with a short walks and  local sightseeing of Gangotri dhamand harsil area. <br><br>
+                        </p>
+                        <h5>DAY 4 – KEDARNATH JI DARSHAN</h5>
+                        <p>
+                            This is very special day for every pilgrim, today our pilgrims will be blessed with the darshan of kedarnath ji which one of the 12 Jyotirlinga and most difficult to reach due to climate and weather condition.   <br><br>
+                            Chopper will land at Guptkashi/Sitapur/Sersi/phata helipad   from   Gangotri/Harsil, the helicopter will be changed due to government regulation. Passanger will board another helicopter and fly to KEDARNATH Helipad. Kedarnath shrine is 500 meters away from kedarnath dham helipad and it will take 10-15 min to reach by walk.  <br><br>
+                            After VIP darshan at Kedarnath temple and bhim shilla in kedarnath return to helipad and return to phata/ Guptkashi/Sersi/Sitapur by helicopter. Stay arrangement is in Guptkashi/Sitapur/Sersi/phata, because no good comfortable hotel is in kedarnath ji. Hotels and resort are in Guptkashi/Sitapur/Sersi/phata which is kedarnath  yatra base. <br><br>
+                            If Passengers tourist want to visit ancient   Triyuginarayan temple  or   Kalimath   temple   in   the evening, they can visit if time allows.
+                        </p>
+                        <h5>DAY 5 – BADRINATH JI DARSHAN</h5>
+                        <p>
+                            On arrival at Badrinath dham, one of main original chardham stablish by Sankracharya. pilgrims check in to Hotel. Evening is free to visit of mana village, chattarpal temple, Origin of saraswati river, vyas gufa , ganesh gufa which is  3kms from  religious temple of Badrinath Dham. <br><br>
+                            Main highlight of this chardham tour by helicopter is the special Maha Abhishek Pooja at Badrinath dham. Maha abhisheck pooja starts at 0400AM sharp in the morning and last for around 2 hours.  Performing maha Abhishek at badrinath  dham is one of life time achievement We have  arranged this special opportunity  for  all  our  guest pilgrims tourist to  sit  inside  the  temple  and  get  the blessing and darshan of badrinath with  Shringar of the deity badrinath .
+                        </p>
+                        <h5>DAY 6 – LEAVE TO DEHRADUN </h5>
+                        <p>Morning after breakfast checkout from the hotel & drop at Dehradun Airport. This luxury chardham tour by helicopter end with dropping at Dehradun Airport/ railway station/ Hotel. our Services Terminates here with blessing with almighty badrinath , Kedarnath, Gangotri and Yamunotri....</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>© 2019 Cheapexo Pvt. Ltd. India. All brands are trademarks of their respective owners.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        var login = false;
+        $("#login").click(function() {
+            if(login==true){
+                $(".user-more-info").css('display','block');
+            }
+            else{
+                $(".login-model").css('display','flex');
+            }
+        });
+        $(".close").click(function() {
+            $(".login-model").css('display','none');
+        });
+        $(".signup-notify").click(function() {
+            $(".login-box").css('display','none');
+            $(".signup-box").css('display','block');
+        });
+        $(".signin-notify").click(function() {
+            $(".login-box").css('display','block');
+            $(".signup-box").css('display','none');
+        });
+
+        $(".input").focus(function(){
+            $(this).parent().addClass("focus");
+            }).blur(function(){
+                if($(this).val() ===''){
+                $(this).parent().removeClass("focus");
+            }
+        });
+
+    </script>
+
+
+    <script>
+        $('.customers-slider').owlCarousel({
+            autoplay: true,
+            loop: true,
+            margin:25,
+            dots:false,
+            slideTransition:'linear',
+            autoplayTimeout:4000,
+            autoplayHoverPause:true,
+            autoplaySpeed:4000,
+            responsive:{
+                0:{
+                    items:1
+                },
+                500: {
+                    items:2
+                },
+                600:{
+                    items:3
+                },
+                800:{
+                    items:3
+                },
+                1200:{
+                    items:4
+                }
+
+            }
+
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript" src="js/cheapexo.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

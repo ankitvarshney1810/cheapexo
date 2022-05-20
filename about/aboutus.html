@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cheapexo - Hotels, Flight Booking, Train Reservation, Cheap Air Tickets</title>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#281483">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/the-datepicker.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script src="js/the-datepicker.js"></script>
+    <link rel="icon" href="images/icon.png" type="image"/>
+</head>
+<body>
+    <header class="solid-back">
+        <a href="index.html" class="site-name"><img src="images/cheapexo-light.png" alt="" class="light-logo"><img src="images/cheapexo-dark.png" alt="" class="dark-logo"></a>
+        <nav>
+            <a href="aboutus.html" class="link active">About Us<span class="line"></span></a>
+            <a href="contactus.html" class="link">Contact Us <span class="line"></span></a>
+            <a href="privacypolicy.html" class="link">Privacy & Policy <span class="line"></span></a>
+            <a href="refundpolicy.html" class="link">Refund Policy <span class="line"></span></a>
+            <a href="termscondition.html" class="link">Terms & Conditions Applied <span class="line"></span></a>
+        </nav>
+        <div class="btnm">
+            <div class="btnmenu">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="about-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <span>About Us</span>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>
+                        Cheapexo.com is the leading travel website for destination search and tour
+                        planning in India. Find comparison of the best deals in Hotels, Trains,
+                        Flights, Helicopter, Taxi, Airtaxi, Bus, Car and travel packages, all at one
+                        place.Cheapexo.com aggregates information from hundreds of travel sites
+                        to bring to you a range of offers and deals. With Cheapexo.com, you can
+                        always plan your travel better. Check out the Trip Planner to find custom
+                        travel itinerary for your next holidays. Find the fastest and cheapest flights
+                        and buses at the click of a button. You can check realtime seat availability
+                        of Indian Railway Trains. Cheapexo.com is your best travel assistant both
+                        over the web and on the mobile. You can use Cheapexo Mobile Apps for
+                        travel, buses, cabs, and train and hotels. You can make use of the
+                        Cheapexo PNR App for checking berth status on a wait-listed ticket and
+                        even see the prediction probability of confirmation. Services and apps
+                        provided by Ceapexo.com in world . So, check out all the services today
+                        and avail some cool benefits, such as the lowest fare on flights. At
+                        Cheapexo, you can also look for branded and non-branded hotels
+                        anywhere in World and book from the best accommodations available at
+                        the best prices. In addition, you can search for travel packages for a
+                        weekend trip, great beaches, hills, wildlife destinations, and much more.
+                        Cheapexo is your ultimate stop for the best travel plans. Explore the
+                        website now!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="head">Get In Touch</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 top-margin-20">
+                    <div class="card">
+                        <div class="heading">Address</div>
+                        <span> <strong>Cheapexo.com</strong> <br> Block H-146, Second floor, Sector 63, Noida, Uttar Pradesh 201309</span>
+                    </div>
+                </div>
+                <div class="col-md-4 top-margin-20">
+                    <a href="tel:+8750033334" class="card">
+                        <div class="heading">Contact Number</div>
+                        <span style="font-size: 20px;">8750033334</span>
+                    </a>
+                </div>
+                <div class="col-md-4 top-margin-20">
+                    <a href="mailto:info@cheapexo.com" class="card">
+                        <div class="heading">Mail Us on</div>
+                        <span style="font-size: 20px;">info@cheapexo.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>© 2019 Cheapexo Pvt. Ltd. India. All brands are trademarks of their respective owners.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            passangercount();
+        };
+    </script>
+
+    <script>
+    	$(document).ready(function (){
+            $("#exchange").on('click',function(){
+                var pickup = $('#from').val();
+                $('#from').val($('#to').val());
+                $('#to').val(pickup);
+                var pickup1 = $('#from_airport_id').val();
+                $('#from_airport_id').val($('#to_airport_id').val());
+                $('#to_airport_id').val(pickup1);
+            });
+        });
+    </script>
+
+
+    <script>
+        var login = false;
+        $("#login").click(function() {
+            if(login==true){
+                $(".user-more-info").css('display','block');
+            }
+            else{
+                $(".login-model").css('display','flex');
+            }
+        });
+        $(".close").click(function() {
+            $(".login-model").css('display','none');
+        });
+        $(".signup-notify").click(function() {
+            $(".login-box").css('display','none');
+            $(".signup-box").css('display','block');
+        });
+        $(".signin-notify").click(function() {
+            $(".login-box").css('display','block');
+            $(".signup-box").css('display','none');
+        });
+
+        $(".input").focus(function(){
+            $(this).parent().addClass("focus");
+            }).blur(function(){
+                if($(this).val() ===''){
+                $(this).parent().removeClass("focus");
+            }
+        });
+
+    </script>
+
+    <script>
+        function validateform(){  
+            console.log('anki');
+        var fromairport=document.flightsearch.from_airport_id.value;  
+        var toairport=document.flightsearch.to_airport_id.value;  
+                
+        if (fromairport==null || fromairport==''){  
+          document.getElementById("fromvalidate").style.display = "block";  
+          //$("#fromvalidate").focus();
+          return false; 
+        }
+        else if(toairport==null || toairport==""){  
+          document.getElementById("tovalidate").style.display = "block";  
+          return false;  
+          }  
+        } 
+    </script>
+
+
+
+
+    <script>
+        $('.customers-slider').owlCarousel({
+            autoplay: true,
+            loop: true,
+            margin:25,
+            dots:false,
+            slideTransition:'linear',
+            autoplayTimeout:4000,
+            autoplayHoverPause:true,
+            autoplaySpeed:4000,
+            responsive:{
+                0:{
+                    items:1
+                },
+                500: {
+                    items:2
+                },
+                600:{
+                    items:3
+                },
+                800:{
+                    items:3
+                },
+                1200:{
+                    items:4
+                }
+
+            }
+
+        });
+    </script>
+
+
+    <script>
+        const input = document.getElementById('example');
+        const datepicker = new TheDatepicker.Datepicker(input);
+        datepicker.render();
+    </script>
+    <script>
+        const input2 = document.getElementById('example2');
+        const datepicker2 = new TheDatepicker.Datepicker(input2);
+        datepicker2.render();
+    </script>
+
+    <script>
+        $(document).ready(function(){
+          $("#oneway").click(function(){
+            $("#example2").prop('disabled', true);
+            $("#roundtrip").removeClass("active");
+            $("#oneway").addClass("active");
+          });
+          $("#roundtrip").click(function(){
+            $("#example2").prop('disabled', false);
+            $("#roundtrip").addClass("active");
+            $("#oneway").removeClass("active");
+          });
+          $("#return").click(function(){
+            $("#example2").prop('disabled', false);
+            $("#roundtrip").addClass("active");
+            $("#oneway").removeClass("active");
+          });
+          $("#passenger-box").click(function(){
+            $("#custombox").css('transform','scale(1)');
+          });
+          $("#close").click(function(){
+            $("#custombox").hide();
+          });
+          $("#passenger").click(function(){
+            $("#custombox").show();
+          });
+        });
+    </script>
+
+
+    <script type="text/javascript" src="js/cheapexo.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

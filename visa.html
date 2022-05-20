@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cheapexo - Flight Booking, Train Reservation, Hotels, Cheap Air Tickets</title>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#281483">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/the-datepicker.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script src="js/the-datepicker.js"></script>
+    <link rel="icon" href="images/icon.png" type="image"/>
+</head>
+<body>
+    <header>
+        <a href="" class="site-name"><img src="images/cheapexo-light.png" alt="" class="light-logo"><img src="images/cheapexo-dark.png" alt="" class="dark-logo"></a>
+        <nav>
+            <a href="index.html" class="link"><i class="fas fa-plane-departure"></i>Fligths<span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-hotel"></i>Hotels <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-bus"></i>Buses <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-taxi"></i>Taxi <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-train"></i>Trains <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-ship"></i>Cruise <span class="line"></span></a>
+            <a href="helicopter.html" class="link"><i class="fas fa-helicopter"></i>Helicopter <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-taxi"></i>Air Taxi <span class="line"></span></a>
+            <a href="visa.html" class="link active"><i class="fab fa-cc-visa"></i></i>Visa <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-gift"></i>Offers <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-pencil-alt"></i>Travel Stories <span class="line"></span></a>
+            <div class="dropdown">
+                <span class="dropbtn">More..</span>
+                <div class="dropdown-content">
+                    <a href="" class="drop-link">Forex</a>
+                    <a href="" class="drop-link">Anything</a>
+                </div>
+            </div>
+        </nav>
+        <div class="login" id="login">
+            <i class="fas fa-user-circle"></i>
+            <div class="user-more-info" id="user-more-info">
+                <div class="tip"></div>
+                <div class="item">Account</div>
+                <div class="item">Bookings</div>
+                <div class="item">Alerts</div>
+                <div class="item">Travellers</div>
+                <div class="item">Logout</div>
+            </div>
+        </div>
+        <div class="btnm">
+            <div class="btnmenu">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </div>
+        </div>
+    </header>
+    <div class="model login-model">
+        <div class="login-box">
+            <div class="login-head">
+                <img src="images/close-light.svg" alt="" class="close">
+                <div class="form-title">Sign In</div>
+            </div>
+            <form class="login-body">
+                <div class="inputBox">
+                    <div class="inputText">USERNAME</div>
+                    <input type="text" name="username" class="input" id="username" required>
+                </div>
+                <div class="inputBox">
+                    <div class="inputText">PASSWORD</div>
+                    <input type="password" name="password" class="input" id="password" required>
+                </div>
+                <a href="forget.html" class="forget">Forget Password ?</a>
+                <div class="inputBox">
+                    <input type="submit"  class="btn-apply" value="LOGIN">
+                </div>
+                <span class="signup-notify">Don't have an account? <strong>SIGN UP</strong></span>
+            </form>
+        </div>
+        <div class="signup-box">
+            <div class="signup-head">
+                <img src="images/close-light.svg" alt="" class="close">
+                <div class="form-title">Sign Up</div>
+            </div>
+            <form class="signup-body">
+                <div class="inputBox">
+                    <div class="inputText">Email / Mobile number</div>
+                    <input type="text" name="username" class="input" id="username" required>
+                </div>
+                <div class="inputBox">
+                    <div class="inputText">PASSWORD</div>
+                    <input type="password" name="password" class="input" id="password" required>
+                </div>
+                <div class="inputBox">
+                    <div class="inputText">CONFIRM PASSWORD</div>
+                    <input type="password" name="confirm-password" class="input" id="confirm-password" required>
+                </div>
+                <div class="inputBox">
+                    <input type="submit"  class="btn-apply" value="LOGIN">
+                </div>
+                <span class="signin-notify">Have an account? <strong>SIGN IN</strong></span>
+            </form>
+        </div>
+    </div>
+    <div class="slide_wrapper_visa">
+    	<div class="owl-carousel">
+    		<img src="images/slider/visa1.webp">
+    		<img src="images/slider/visa2.webp">
+    		<img src="images/slider/visa3.webp">
+    		<img src="images/slider/visa4.webp">
+    		<img src="images/slider/visa5.webp">
+    	</div>
+    	<script>
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                animateOut: 'fadeOut',
+                items:1,
+                loop:true,
+                margin:0,
+                autoplay:true,
+                autoplayTimeout:4000,
+                autoplayHoverPause:false
+            });
+            $('.play').on('click',function(){
+                owl.trigger('play.owl.autoplay',[1000])
+            })
+            $('.stop').on('click',function(){
+                owl.trigger('stop.owl.autoplay')
+            })
+        </script>
+    </div>
+    <div class="visa-form">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="head">
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-2 text-center">
+                                <img src="images/moneyback_icon.png" alt="">
+                            </div>
+                            <div class="col-8 align-self-center">
+                                <h1>CHECK VISA REQUIREMENTS<hr></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row top-margin-40">
+                <div class="col">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Where am I From?</span>
+                                    <p>NATIONALITY AS IN PASSPORT</p>
+                                    <select id="travellingFrom" name="travellingFrom" class="form-control">
+                                        <option value="" selected="selected" disabled="disabled">Choose Country</option> 
+                                        <option value="AU" data-url="">Australia (AU)</option>
+                                        <option value="CA" data-url="">Canada (CA)</option>
+                                        <option value="IN" data-url="">India (IN)</option>
+                                        <option value="ES" data-url="">Spain (ES)</option>
+                                        <option value="GB" data-url="">United Kingdom (GB)</option>
+                                        <option value="US" data-url="">United States (US)</option>
+                                        <option disabled="disabled">-------------------</option> <option value="AF" data-url="">Afghanistan (AF)</option>
+                                        <option value="AX" data-url="">Aland Islands (AX)</option>
+                                        <option value="AL" data-url="">Albania (AL)</option>
+                                        <option value="DZ" data-url="">Algeria (DZ)</option>
+                                        <option value="AS" data-url="">American Samoa (AS)</option>
+                                        <option value="AD" data-url="">Andorra (AD)</option>
+                                        <option value="AO" data-url="">Angola (AO)</option>
+                                        <option value="AI" data-url="">Anguilla (AI)</option>
+                                        <option value="AQ" data-url="">Antarctica (AQ)</option>
+                                        <option value="AG" data-url="">Antigua &amp; Barbuda (AG)</option>
+                                        <option value="AR" data-url="">Argentina (AR)</option>
+                                        <option value="AM" data-url="">Armenia (AM)</option>
+                                        <option value="AW" data-url="">Aruba (AW)</option>
+                                        <option value="AU" data-url="">Australia (AU)</option>
+                                        <option value="AT" data-url="">Austria (AT)</option>
+                                        <option value="AZ" data-url="">Azerbaijan (AZ)</option>
+                                        <option value="BS" data-url="">Bahamas (BS)</option>
+                                        <option value="BH" data-url="">Bahrain (BH)</option>
+                                        <option value="BD" data-url="">Bangladesh (BD)</option>
+                                        <option value="BB" data-url="">Barbados (BB)</option>
+                                        <option value="BY" data-url="">Belarus (BY)</option>
+                                        <option value="BE" data-url="">Belgium (BE)</option>
+                                        <option value="BZ" data-url="">Belize (BZ)</option>
+                                        <option value="BJ" data-url="">Benin (BJ)</option>
+                                        <option value="BM" data-url="">Bermuda (BM)</option>
+                                        <option value="BT" data-url="">Bhutan (BT)</option>
+                                        <option value="BO" data-url="">Bolivia (BO)</option>
+                                        <option value="BQ" data-url="">Bonaire, St Eustatius and Saba (BQ)</option>
+                                        <option value="BA" data-url="">Bosnia and Herzegovina (BA)</option>
+                                        <option value="BW" data-url="">Botswana (BW)</option>
+                                        <option value="BV" data-url="">Bouvet Island (BV)</option>
+                                        <option value="BR" data-url="">Brazil (BR)</option>
+                                        <option value="IO" data-url="">British Indian Ocean Territory (IO)</option>
+                                        <option value="BN" data-url="">Brunei Darussalam (BN)</option>
+                                        <option value="BG" data-url="">Bulgaria (BG)</option>
+                                        <option value="BF" data-url="">Burkina Faso (BF)</option>
+                                        <option value="BI" data-url="">Burundi (BI)</option>
+                                        <option value="KH" data-url="">Cambodia (KH)</option>
+                                        <option value="CM" data-url="">Cameroon (CM)</option>
+                                        <option value="CA" data-url="">Canada (CA)</option>
+                                        <option value="CV" data-url="">Cape Verde (CV)</option>
+                                        <option value="KY" data-url="">Cayman Islands (KY)</option>
+                                        <option value="CF" data-url="">Central African Republic (CF)</option>
+                                        <option value="TD" data-url="">Chad (TD)</option>
+                                        <option value="CL" data-url="">Chile (CL)</option>
+                                        <option value="CN" data-url="">China (CN)</option>
+                                        <option value="CX" data-url="">Christmas Island (CX)</option>
+                                        <option value="CC" data-url="">Cocos (K) Island (CC)</option>
+                                        <option value="CO" data-url="">Colombia (CO)</option>
+                                        <option value="KM" data-url="">Comoros (KM)</option>
+                                        <option value="CG" data-url="">Congo (CG)</option>
+                                        <option value="CK" data-url="">Cook Islands (CK)</option>
+                                        <option value="CR" data-url="">Costa Rica (CR)</option>
+                                        <option value="CI" data-url="">Ivory Coast (CI)</option>
+                                        <option value="HR" data-url="">Croatia (HR)</option>
+                                        <option value="CU" data-url="">Cuba (CU)</option>
+                                        <option value="CW" data-url="">Curacao (CW)</option>
+                                        <option value="CY" data-url="">Cyprus (CY)</option>
+                                        <option value="CZ" data-url="">Czech Republic (CZ)</option>
+                                        <option value="CD" data-url="">Democratic Republic of Congo (CD)</option>
+                                        <option value="DK" data-url="">Denmark (DK)</option>
+                                        <option value="DJ" data-url="">Djibouti (DJ)</option>
+                                        <option value="DM" data-url="">Dominica (DM)</option>
+                                        <option value="DO" data-url="">Dominican Republic (DO)</option>
+                                        <option value="TL" data-url="">East Timor (TL)</option>
+                                        <option value="EC" data-url="">Ecuador (EC)</option>
+                                        <option value="EG" data-url="">Egypt (EG)</option>
+                                        <option value="SV" data-url="">El Salvador (SV)</option>
+                                        <option value="GQ" data-url="">Equatorial Guinea (GQ)</option>
+                                        <option value="ER" data-url="">Eritrea (ER)</option>
+                                        <option value="EE" data-url="">Estonia (EE)</option>
+                                        <option value="ET" data-url="">Ethiopia (ET)</option>
+                                        <option value="FK" data-url="">Falkland Islands (Malvinas) (FK)</option>
+                                        <option value="FO" data-url="">Faroe Islands (FO)</option>
+                                        <option value="FJ" data-url="">Fiji (FJ)</option>
+                                        <option value="FI" data-url="">Finland (FI)</option>
+                                        <option value="FR" data-url="">France (FR)</option>
+                                        <option value="GF" data-url="">French Guiana (GF)</option>
+                                        <option value="PF" data-url="">French Polynesia (PF)</option>
+                                        <option value="TF" data-url="">French West Indies (TF)</option>
+                                        <option value="GA" data-url="">Gabon (GA)</option>
+                                        <option value="GM" data-url="">Gambia (GM)</option>
+                                        <option value="GE" data-url="">Georgia (GE)</option>
+                                        <option value="DE" data-url="">Germany (DE)</option>
+                                        <option value="GH" data-url="">Ghana (GH)</option>
+                                        <option value="GI" data-url="">Gibraltar (GI)</option>
+                                        <option value="GR" data-url="">Greece (GR)</option>
+                                        <option value="GL" data-url="">Greenland (GL)</option>
+                                        <option value="GD" data-url="">Grenada (GD)</option>
+                                        <option value="GP" data-url="">Guadeloupe (GP)</option>
+                                        <option value="GU" data-url="">Guam (GU)</option>
+                                        <option value="GT" data-url="">Guatemala (GT)</option>
+                                        <option value="GG" data-url="">Guernsey (GG)</option>
+                                        <option value="GN" data-url="">Guinea (GN)</option>
+                                        <option value="GW" data-url="">Guinea-Bissau (GW)</option>
+                                        <option value="GY" data-url="">Guyana (GY)</option>
+                                        <option value="HT" data-url="">Haiti (HT)</option>
+                                        <option value="HM" data-url="">Heard Island and McDonald Islands (HM)</option>
+                                        <option value="HN" data-url="">Honduras (HN)</option>
+                                        <option value="HK" data-url="">Hong Kong (HK)</option>
+                                        <option value="HU" data-url="">Hungary (HU)</option>
+                                        <option value="IS" data-url="">Iceland (IS)</option>
+                                        <option value="IN" data-url="">India (IN)</option>
+                                        <option value="ID" data-url="">Indonesia (ID)</option>
+                                        <option value="IR" data-url="">Iran (IR)</option>
+                                        <option value="IQ" data-url="">Iraq (IQ)</option>
+                                        <option value="IE" data-url="">Ireland (IE)</option>
+                                        <option value="IM" data-url="">Isle of Man (IM)</option>
+                                        <option value="IL" data-url="">Israel (IL)</option>
+                                        <option value="IT" data-url="">Italy (IT)</option>
+                                        <option value="JM" data-url="">Jamaica (JM)</option>
+                                        <option value="JP" data-url="">Japan (JP)</option>
+                                        <option value="JE" data-url="">Jersey (JE)</option>
+                                        <option value="JO" data-url="">Jordan (JO)</option>
+                                        <option value="KZ" data-url="">Kazakhstan (KZ)</option>
+                                        <option value="KE" data-url="">Kenya (KE)</option>
+                                        <option value="KI" data-url="">Kiribati (KI)</option>
+                                        <option value="XK" data-url="">Kosovo (XK)</option>
+                                        <option value="KW" data-url="">Kuwait (KW)</option>
+                                        <option value="KG" data-url="">Kyrgyzstan (KG)</option>
+                                        <option value="LA" data-url="">Laos (LA)</option>
+                                        <option value="LV" data-url="">Latvia (LV)</option>
+                                        <option value="LB" data-url="">Lebanon (LB)</option>
+                                        <option value="LS" data-url="">Lesotho (LS)</option>
+                                        <option value="LR" data-url="">Liberia (LR)</option>
+                                        <option value="LY" data-url="">Libya (LY)</option>
+                                        <option value="LI" data-url="">Liechtenstein (LI)</option>
+                                        <option value="LT" data-url="">Lithuania (LT)</option>
+                                        <option value="LU" data-url="">Luxembourg (LU)</option>
+                                        <option value="MO" data-url="">Macao (MO)</option>
+                                        <option value="MK" data-url="">Macedonia (MK)</option>
+                                        <option value="MG" data-url="">Madagascar (MG)</option>
+                                        <option value="MW" data-url="">Malawi (MW)</option>
+                                        <option value="MY" data-url="">Malaysia (MY)</option>
+                                        <option value="MV" data-url="">Maldives (MV)</option>
+                                        <option value="ML" data-url="">Mali (ML)</option>
+                                        <option value="MT" data-url="">Malta (MT)</option>
+                                        <option value="MH" data-url="">Marshall Islands (MH)</option>
+                                        <option value="MQ" data-url="">Martinique (MQ)</option>
+                                        <option value="MR" data-url="">Mauritania (MR)</option>
+                                        <option value="MU" data-url="">Mauritius (MU)</option>
+                                        <option value="YT" data-url="">Mayotte (YT)</option>
+                                        <option value="MX" data-url="">Mexico (MX)</option>
+                                        <option value="FM" data-url="">Micronesia (FM)</option>
+                                        <option value="MD" data-url="">Moldova (MD)</option>
+                                        <option value="MC" data-url="">Monaco (MC)</option>
+                                        <option value="MN" data-url="">Mongolia (MN)</option>
+                                        <option value="ME" data-url="">Montenegro (ME)</option>
+                                        <option value="MS" data-url="">Montserrat (MS)</option>
+                                        <option value="MA" data-url="">Morocco (MA)</option>
+                                        <option value="MZ" data-url="">Mozambique (MZ)</option>
+                                        <option value="MM" data-url="">Myanmar (MM)</option>
+                                        <option value="NA" data-url="">Namibia (NA)</option>
+                                        <option value="NR" data-url="">Nauru (NR)</option>
+                                        <option value="NP" data-url="">Nepal (NP)</option>
+                                        <option value="NL" data-url="">Netherlands (NL)</option>
+                                        <option value="NC" data-url="">New Caledonia (NC)</option>
+                                        <option value="NZ" data-url="">New Zealand (NZ)</option>
+                                        <option value="NI" data-url="">Nicaragua (NI)</option>
+                                        <option value="NE" data-url="">Niger (NE)</option>
+                                        <option value="NG" data-url="">Nigeria (NG)</option>
+                                        <option value="NU" data-url="">Niue (NU)</option>
+                                        <option value="NF" data-url="">Norfolk Island (NF)</option>
+                                        <option value="KP" data-url="">North Korea (KP)</option>
+                                        <option value="MP" data-url="">Northern Mariana Islands (MP)</option>
+                                        <option value="NO" data-url="">Norway (NO)</option>
+                                        <option value="OM" data-url="">Oman (OM)</option>
+                                        <option value="PK" data-url="">Pakistan (PK)</option>
+                                        <option value="PW" data-url="">Palau (PW)</option>
+                                        <option value="PS" data-url="">Palestine (PS)</option>
+                                        <option value="PA" data-url="">Panama (PA)</option>
+                                        <option value="PG" data-url="">Papua New Guinea (PG)</option>
+                                        <option value="PY" data-url="">Paraguay (PY)</option>
+                                        <option value="PE" data-url="">Peru (PE)</option>
+                                        <option value="PH" data-url="">Philippines (PH)</option>
+                                        <option value="PN" data-url="">Pitcairn (PN)</option>
+                                        <option value="PL" data-url="">Poland (PL)</option>
+                                        <option value="PT" data-url="">Portugal (PT)</option>
+                                        <option value="PR" data-url="">Puerto Rico (PR)</option>
+                                        <option value="QA" data-url="">Qatar (QA)</option>
+                                        <option value="RE" data-url="">Reunion (RE)</option>
+                                        <option value="RO" data-url="">Romania (RO)</option>
+                                        <option value="RU" data-url="">Russia (RU)</option>
+                                        <option value="RW" data-url="">Rwanda (RW)</option>
+                                        <option value="BL" data-url="">Saint Barthelemy (BL)</option>
+                                        <option value="SH" data-url="">Saint Helena (SH)</option>
+                                        <option value="KN" data-url="">Saint Kitts and Nevis (KN)</option>
+                                        <option value="LC" data-url="">Saint Lucia (LC)</option>
+                                        <option value="MF" data-url="">Saint Martin (MF)</option>
+                                        <option value="PM" data-url="">Saint Pierre and Miquelon (PM)</option>
+                                        <option value="VC" data-url="">Saint Vincent &amp; Grenadines (VC)</option>
+                                        <option value="WS" data-url="">Samoa (WS)</option>
+                                        <option value="SM" data-url="">San Marino (SM)</option>
+                                        <option value="ST" data-url="">Sao Tome &amp; Principe (ST)</option>
+                                        <option value="SA" data-url="">Saudi Arabia (SA)</option>
+                                        <option value="SN" data-url="">Senegal (SN)</option>
+                                        <option value="RS" data-url="">Serbia (RS)</option>
+                                        <option value="SC" data-url="">Seychelles (SC)</option>
+                                        <option value="SL" data-url="">Sierra Leone (SL)</option>
+                                        <option value="SG" data-url="">Singapore (SG)</option>
+                                        <option value="SX" data-url="">Sint Maarten (SX)</option>
+                                        <option value="SK" data-url="">Slovakia (SK)</option>
+                                        <option value="SI" data-url="">Slovenia (SI)</option>
+                                        <option value="SB" data-url="">Solomon Islands (SB)</option>
+                                        <option value="SO" data-url="">Somalia (SO)</option>
+                                        <option value="ZA" data-url="">South Africa (ZA)</option>
+                                        <option value="GS" data-url="">South Georgia and the South Sandwich Islands (GS)</option>
+                                        <option value="KR" data-url="">South Korea (KR)</option>
+                                        <option value="SS" data-url="">South Sudan (SS)</option>
+                                        <option value="ES" data-url="">Spain (ES)</option>
+                                        <option value="LK" data-url="">Sri Lanka (LK)</option>
+                                        <option value="SD" data-url="">Sudan (SD)</option>
+                                        <option value="SR" data-url="">Suriname (SR)</option>
+                                        <option value="SJ" data-url="">Svalbard &amp; Jan Mayen (SJ)</option>
+                                        <option value="SZ" data-url="">Swaziland (SZ)</option>
+                                        <option value="SE" data-url="">Sweden (SE)</option>
+                                        <option value="CH" data-url="">Switzerland (CH)</option>
+                                        <option value="SY" data-url="">Syria (SY)</option>
+                                        <option value="TW" data-url="">Taiwan (TW)</option>
+                                        <option value="TJ" data-url="">Tajikistan (TJ)</option>
+                                        <option value="TZ" data-url="">Tanzania (TZ)</option>
+                                        <option value="TH" data-url="">Thailand (TH)</option>
+                                        <option value="TG" data-url="">Togo (TG)</option>
+                                        <option value="TK" data-url="">Tokelau (TK)</option>
+                                        <option value="TO" data-url="">Tonga (TO)</option>
+                                        <option value="TT" data-url="">Trinidad and Tobago (TT)</option>
+                                        <option value="TN" data-url="">Tunisia (TN)</option>
+                                        <option value="TR" data-url="">Turkey (TR)</option>
+                                        <option value="TM" data-url="">Turkmenistan (TM)</option>
+                                        <option value="TC" data-url="">Turks &amp; Caicos Islands (TC)</option>
+                                        <option value="TV" data-url="">Tuvalu (TV)</option>
+                                        <option value="UG" data-url="">Uganda (UG)</option>
+                                        <option value="VG" data-url="">UK Virgin Islands (VG)</option>
+                                        <option value="UA" data-url="">Ukraine (UA)</option>
+                                        <option value="AE" data-url="">United Arab Emirates (AE)</option>
+                                        <option value="GB" data-url="">United Kingdom (GB)</option>
+                                        <option value="US" data-url="">United States (US)</option>
+                                        <option value="UM" data-url="">United States Minor Outlying Islands (UM)</option>
+                                        <option value="UY" data-url="">Uruguay (UY)</option>
+                                        <option value="VI" data-url="">US Virgin Islands (VI)</option>
+                                        <option value="UZ" data-url="">Uzbekistan (UZ)</option>
+                                        <option value="VU" data-url="">Vanuatu (VU)</option>
+                                        <option value="VA" data-url="">Vatican City (VA)</option>
+                                        <option value="VE" data-url="">Venezuela (VE)</option>
+                                        <option value="VN" data-url="">Vietnam (VN)</option>
+                                        <option value="WF" data-url="">Wallis and Futuna (WF)</option>
+                                        <option value="EH" data-url="">Western Sahara (EH)</option>
+                                        <option value="YE" data-url="">Yemen (YE)</option>
+                                        <option value="ZM" data-url="">Zambia (ZM)</option>
+                                        <option value="ZW" data-url="">Zimbabwe (ZW    </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <i class="fas fa-location-arrow"></i>
+                                    <span>Where am I Going?</span>
+                                    <p>TRAVELLING TO</p>
+                                    <select id="travellingTo" name="travellingTo" class="form-control">
+                                        <option value="" selected="selected" disabled="disabled">Choose Country</option> 
+                                        <option value="AU" data-url="/visa-australia">Australia (AU)</option>
+                                        <option value="IN" data-url="/india-visa-application">India (IN)</option>
+                                        <option value="SG" data-url="/singapore-electronic-arrival-card">Singapore (SG)</option>
+                                        <option value="LK" data-url="/sri-lanka-visa">Sri Lanka (LK)</option>
+                                        <option value="TR" data-url="/turkey-turkish-visa">Turkey (TR)</option>
+                                        <option value="VN" data-url="/vietnam-e-visa">Vietnam (VN)</option>
+                                        <option disabled="disabled">-------------------</option> <option value="AF" data-url="/afghanistan-visa">Afghanistan (AF)</option>
+                                        <option value="AX" data-url="/aland-islands-schengen-visa">Aland Islands (AX)</option>
+                                        <option value="AL" data-url="/albania-visa">Albania (AL)</option>
+                                        <option value="DZ" data-url="/algeria-visa">Algeria (DZ)</option>
+                                        <option value="AS" data-url="/american-samoa-visa-on-arrival">American Samoa (AS)</option>
+                                        <option value="AD" data-url="" disabled="disabled">Andorra (AD)</option>
+                                        <option value="AO" data-url="/angola-e-visa">Angola (AO)</option>
+                                        <option value="AI" data-url="/anguilla-visa">Anguilla (AI)</option>
+                                        <option value="AQ" data-url="/antarctica-visa">Antarctica (AQ)</option>
+                                        <option value="AG" data-url="/antigua-and-barbuda-e-visa">Antigua &amp; Barbuda (AG)</option>
+                                        <option value="AR" data-url="/argentina-tourist-evisa">Argentina (AR)</option>
+                                        <option value="AM" data-url="/armenia-e-visa">Armenia (AM)</option>
+                                        <option value="AW" data-url="/aruba-visa">Aruba (AW)</option>
+                                        <option value="AU" data-url="/visa-australia">Australia (AU)</option>
+                                        <option value="AT" data-url="/austria-schengen-visa">Austria (AT)</option>
+                                        <option value="AZ" data-url="/azerbaijan-visa">Azerbaijan (AZ)</option>
+                                        <option value="BS" data-url="/bahamas-visa">Bahamas (BS)</option>
+                                        <option value="BH" data-url="/bahrain-visa">Bahrain (BH)</option>
+                                        <option value="BD" data-url="/bangladesh-visa">Bangladesh (BD)</option>
+                                        <option value="BB" data-url="/barbados-visa">Barbados (BB)</option>
+                                        <option value="BY" data-url="/belarus-visa">Belarus (BY)</option>
+                                        <option value="BE" data-url="/belgium-schengen-visa">Belgium (BE)</option>
+                                        <option value="BZ" data-url="/belize-visa">Belize (BZ)</option>
+                                        <option value="BJ" data-url="/benin-e-visa">Benin (BJ)</option>
+                                        <option value="BM" data-url="/bermuda-visa">Bermuda (BM)</option>
+                                        <option value="BT" data-url="/bhutan-visa">Bhutan (BT)</option>
+                                        <option value="BO" data-url="/bolivia-visa">Bolivia (BO)</option>
+                                        <option value="BQ" data-url="/bonaire-visa">Bonaire, St Eustatius and Saba (BQ)</option>
+                                        <option value="BA" data-url="/bosnia-visa">Bosnia and Herzegovina (BA)</option>
+                                        <option value="BW" data-url="/botswana-visa">Botswana (BW)</option>
+                                        <option value="BV" data-url="" disabled="disabled">Bouvet Island (BV)</option>
+                                        <option value="BR" data-url="/brazil-visa">Brazil (BR)</option>
+                                        <option value="IO" data-url="" disabled="disabled">British Indian Ocean Territory (IO)</option>
+                                        <option value="BN" data-url="/brunei-visa">Brunei Darussalam (BN)</option>
+                                        <option value="BG" data-url="/bulgaria-visa">Bulgaria (BG)</option>
+                                        <option value="BF" data-url="/burkina-faso-visa">Burkina Faso (BF)</option>
+                                        <option value="BI" data-url="/burundi-visa">Burundi (BI)</option>
+                                        <option value="KH" data-url="/cambodia-visa">Cambodia (KH)</option>
+                                        <option value="CM" data-url="/cameroon-visa">Cameroon (CM)</option>
+                                        <option value="CA" data-url="/canada-visa-eta">Canada (CA)</option>
+                                        <option value="CV" data-url="/cape-verde-visa">Cape Verde (CV)</option>
+                                        <option value="KY" data-url="/cayman-islands-visa">Cayman Islands (KY)</option>
+                                        <option value="CF" data-url="/central-african-republic-visa">Central African Republic (CF)</option>
+                                        <option value="TD" data-url="/chad-visa">Chad (TD)</option>
+                                        <option value="CL" data-url="/chile-visa">Chile (CL)</option>
+                                        <option value="CN" data-url="/china-10-year-visa">China (CN)</option>
+                                        <option value="CX" data-url="/christmas-island-e-visa">Christmas Island (CX)</option>
+                                        <option value="CC" data-url="/cocos-island-e-vsa">Cocos (K) Island (CC)</option>
+                                        <option value="CO" data-url="/colombia-visa">Colombia (CO)</option>
+                                        <option value="KM" data-url="/comoros-visa-on-arrival">Comoros (KM)</option>
+                                        <option value="CG" data-url="/congo-visa">Congo (CG)</option>
+                                        <option value="CK" data-url="" disabled="disabled">Cook Islands (CK)</option>
+                                        <option value="CR" data-url="/costa-rica-visa">Costa Rica (CR)</option>
+                                        <option value="CI" data-url="/ivory-coast-e-visa">Ivory Coast (CI)</option>
+                                        <option value="HR" data-url="/croatia-visa">Croatia (HR)</option>
+                                        <option value="CU" data-url="/usa-tourist-card-cuba">Cuba (CU)</option>
+                                        <option value="CW" data-url="/curacao-visa">Curacao (CW)</option>
+                                        <option value="CY" data-url="/cyprus-visa">Cyprus (CY)</option>
+                                        <option value="CZ" data-url="/czech-republic-schengen-visa">Czech Republic (CZ)</option>
+                                        <option value="CD" data-url="/democratic-republic-of-congo-visa">Democratic Republic of Congo (CD)</option>
+                                        <option value="DK" data-url="/denmark-schengen-visa">Denmark (DK)</option>
+                                        <option value="DJ" data-url="/djibouti-e-visa">Djibouti (DJ)</option>
+                                        <option value="DM" data-url="/dominica-visa">Dominica (DM)</option>
+                                        <option value="DO" data-url="/tourist-card-dominican-republic">Dominican Republic (DO)</option>
+                                        <option value="TL" data-url="/timor-leste-visa-on-arrival">East Timor (TL)</option>
+                                        <option value="EC" data-url="/ecuador-visa">Ecuador (EC)</option>
+                                        <option value="EG" data-url="/egypt-e-visa">Egypt (EG)</option>
+                                        <option value="SV" data-url="/el-salvador-visa">El Salvador (SV)</option>
+                                        <option value="GQ" data-url="/equatorial-guinea-visa">Equatorial Guinea (GQ)</option>
+                                        <option value="ER" data-url="/eritrea-visa">Eritrea (ER)</option>
+                                        <option value="EE" data-url="/estonia-schengen-visa">Estonia (EE)</option>
+                                        <option value="ET" data-url="/ethiopia-visa">Ethiopia (ET)</option>
+                                        <option value="FK" data-url="/falkland-islands-visa">Falkland Islands (Malvinas) (FK)</option>
+                                        <option value="FO" data-url="/faroe-islands-visa">Faroe Islands (FO)</option>
+                                        <option value="FJ" data-url="/fiji-visa">Fiji (FJ)</option>
+                                        <option value="FI" data-url="/finland-schengen-visa">Finland (FI)</option>
+                                        <option value="FR" data-url="/france-schengen-visa">France (FR)</option>
+                                        <option value="GF" data-url="/french-guiana-visa">French Guiana (GF)</option>
+                                        <option value="PF" data-url="/french-polynesia-visa">French Polynesia (PF)</option>
+                                        <option value="TF" data-url="/french-southern-territories-visa">French West Indies (TF)</option>
+                                        <option value="GA" data-url="/gabon-e-visa">Gabon (GA)</option>
+                                        <option value="GM" data-url="/gambia-visa">Gambia (GM)</option>
+                                        <option value="GE" data-url="/georgia-e-visa">Georgia (GE)</option>
+                                        <option value="DE" data-url="/germany-schengen-visa">Germany (DE)</option>
+                                        <option value="GH" data-url="/ghana-visa">Ghana (GH)</option>
+                                        <option value="GI" data-url="/gibraltar-visa">Gibraltar (GI)</option>
+                                        <option value="GR" data-url="/greece-schengen-visa">Greece (GR)</option>
+                                        <option value="GL" data-url="/greenland-visa">Greenland (GL)</option>
+                                        <option value="GD" data-url="/grenada-visa">Grenada (GD)</option>
+                                        <option value="GP" data-url="/guadeloupe-visa">Guadeloupe (GP)</option>
+                                        <option value="GU" data-url="/guam-visa-on-arrival">Guam (GU)</option>
+                                        <option value="GT" data-url="/guatemala-visa">Guatemala (GT)</option>
+                                        <option value="GG" data-url="/guernsey-leave-to-enter">Guernsey (GG)</option>
+                                        <option value="GN" data-url="/guinea-visa">Guinea (GN)</option>
+                                        <option value="GW" data-url="/guinea-bissau-e-visa">Guinea-Bissau (GW)</option>
+                                        <option value="GY" data-url="/guyana-visa">Guyana (GY)</option>
+                                        <option value="HT" data-url="/haiti-visa">Haiti (HT)</option>
+                                        <option value="HM" data-url="/heard-island-and-mcdonald-islands-e-visa">Heard Island and McDonald Islands (HM)</option>
+                                        <option value="HN" data-url="/honduras-visa">Honduras (HN)</option>
+                                        <option value="HK" data-url="/hong-kong-visa">Hong Kong (HK)</option>
+                                        <option value="HU" data-url="/hungary-schengen-visa">Hungary (HU)</option>
+                                        <option value="IS" data-url="/iceland-schengen-visa">Iceland (IS)</option>
+                                        <option value="IN" data-url="/india-visa-application">India (IN)</option>
+                                        <option value="ID" data-url="/indonesia-visa">Indonesia (ID)</option>
+                                        <option value="IR" data-url="/iran-e-visa">Iran (IR)</option>
+                                        <option value="IQ" data-url="/iraq-visa">Iraq (IQ)</option>
+                                        <option value="IE" data-url="/ireland-visa">Ireland (IE)</option>
+                                        <option value="IM" data-url="/isle-of-man-visa">Isle of Man (IM)</option>
+                                        <option value="IL" data-url="/israel-visa">Israel (IL)</option>
+                                        <option value="IT" data-url="/italy-schengen-visa">Italy (IT)</option>
+                                        <option value="JM" data-url="/jamaica-visa-on-arrival">Jamaica (JM)</option>
+                                        <option value="JP" data-url="/japan-olympics-visa">Japan (JP)</option>
+                                        <option value="JE" data-url="/jersey-visa">Jersey (JE)</option>
+                                        <option value="JO" data-url="/jordan-pass">Jordan (JO)</option>
+                                        <option value="KZ" data-url="/kazakhstan-visa">Kazakhstan (KZ)</option>
+                                        <option value="KE" data-url="/kenya-visa">Kenya (KE)</option>
+                                        <option value="KI" data-url="/kiribati-visa">Kiribati (KI)</option>
+                                        <option value="XK" data-url="/kosovo-visa">Kosovo (XK)</option>
+                                        <option value="KW" data-url="/kuwait-visa">Kuwait (KW)</option>
+                                        <option value="KG" data-url="/kyrgyzstan-e-visa">Kyrgyzstan (KG)</option>
+                                        <option value="LA" data-url="/laos-visa">Laos (LA)</option>
+                                        <option value="LV" data-url="/latvia-schengen-visa">Latvia (LV)</option>
+                                        <option value="LB" data-url="/lebanon-visa-on-arrival">Lebanon (LB)</option>
+                                        <option value="LS" data-url="/lesotho-e-visa">Lesotho (LS)</option>
+                                        <option value="LR" data-url="/liberia-visa">Liberia (LR)</option>
+                                        <option value="LY" data-url="/libya-business-visa">Libya (LY)</option>
+                                        <option value="LI" data-url="/liechtenstein-schengen-visa">Liechtenstein (LI)</option>
+                                        <option value="LT" data-url="/lithuania-schengen-visa">Lithuania (LT)</option>
+                                        <option value="LU" data-url="/luxembourg-schengen-visa">Luxembourg (LU)</option>
+                                        <option value="MO" data-url="/macau-visa-on-arrival">Macao (MO)</option>
+                                        <option value="MK" data-url="/macedonia-visa">Macedonia (MK)</option>
+                                        <option value="MG" data-url="/madagascar-visa-on-arrival">Madagascar (MG)</option>
+                                        <option value="MW" data-url="/malawi-e-visa">Malawi (MW)</option>
+                                        <option value="MY" data-url="/malaysia-entri-visa">Malaysia (MY)</option>
+                                        <option value="MV" data-url="/maldives-visa-on-arrival">Maldives (MV)</option>
+                                        <option value="ML" data-url="/mali-visa">Mali (ML)</option>
+                                        <option value="MT" data-url="/malta-schengen-visa">Malta (MT)</option>
+                                        <option value="MH" data-url="/marshall-islands-visa-on-arrival">Marshall Islands (MH)</option>
+                                        <option value="MQ" data-url="/martinique-visa">Martinique (MQ)</option>
+                                        <option value="MR" data-url="/mauritania-visa">Mauritania (MR)</option>
+                                        <option value="MU" data-url="/mauritius-visa-on-arrival">Mauritius (MU)</option>
+                                        <option value="YT" data-url="/mayotte-visa">Mayotte (YT)</option>
+                                        <option value="MX" data-url="/mexico-tourist-visa">Mexico (MX)</option>
+                                        <option value="FM" data-url="/micronesia-visa">Micronesia (FM)</option>
+                                        <option value="MD" data-url="/moldova-e-visa">Moldova (MD)</option>
+                                        <option value="MC" data-url="/monaco-schengen-visa">Monaco (MC)</option>
+                                        <option value="MN" data-url="/mongolia-visa">Mongolia (MN)</option>
+                                        <option value="ME" data-url="/montenegro-visa">Montenegro (ME)</option>
+                                        <option value="MS" data-url="/montserrat-e-visa">Montserrat (MS)</option>
+                                        <option value="MA" data-url="/morocco-visa">Morocco (MA)</option>
+                                        <option value="MZ" data-url="/mozambique-visa-on-arrival">Mozambique (MZ)</option>
+                                        <option value="MM" data-url="/myanmar-visa">Myanmar (MM)</option>
+                                        <option value="NA" data-url="/namibia-visa-on-arrival">Namibia (NA)</option>
+                                        <option value="NR" data-url="/nauru-visa">Nauru (NR)</option>
+                                        <option value="NP" data-url="/nepal-visa-on-arrival">Nepal (NP)</option>
+                                        <option value="NL" data-url="/netherland-schengen-visa">Netherlands (NL)</option>
+                                        <option value="NC" data-url="/new-caledonia-visa">New Caledonia (NC)</option>
+                                        <option value="NZ" data-url="/new-zealand-eta">New Zealand (NZ)</option>
+                                        <option value="NI" data-url="/nicaragua-visa">Nicaragua (NI)</option>
+                                        <option value="NE" data-url="/niger-visa">Niger (NE)</option>
+                                        <option value="NG" data-url="/nigeria-e-visa">Nigeria (NG)</option>
+                                        <option value="NU" data-url="" disabled="disabled">Niue (NU)</option>
+                                        <option value="NF" data-url="/norfolk-island-e-visa">Norfolk Island (NF)</option>
+                                        <option value="KP" data-url="/north-korea-visa">North Korea (KP)</option>
+                                        <option value="MP" data-url="/northern-mariana-islands-visa-on-arrival">Northern Mariana Islands (MP)</option>
+                                        <option value="NO" data-url="/norway-schengen-visa">Norway (NO)</option>
+                                        <option value="OM" data-url="/oman-visa">Oman (OM)</option>
+                                        <option value="PK" data-url="/pakistan-visa">Pakistan (PK)</option>
+                                        <option value="PW" data-url="/palau-visa-on-arrival">Palau (PW)</option>
+                                        <option value="PS" data-url="" disabled="disabled">Palestine (PS)</option>
+                                        <option value="PA" data-url="/panama-visa-on-arrival">Panama (PA)</option>
+                                        <option value="PG" data-url="/papua-new-guinea-e-visa">Papua New Guinea (PG)</option>
+                                        <option value="PY" data-url="/paraguay-visa">Paraguay (PY)</option>
+                                        <option value="PE" data-url="/peru-visa">Peru (PE)</option>
+                                        <option value="PH" data-url="/philippines-visa">Philippines (PH)</option>
+                                        <option value="PN" data-url="" disabled="disabled">Pitcairn (PN)</option>
+                                        <option value="PL" data-url="/poland-schengen-visa">Poland (PL)</option>
+                                        <option value="PT" data-url="/portugal-schengen-visa">Portugal (PT)</option>
+                                        <option value="PR" data-url="/puerto-rico-visa">Puerto Rico (PR)</option>
+                                        <option value="QA" data-url="/qatar-e-visa">Qatar (QA)</option>
+                                        <option value="RE" data-url="/reunion-visa">Reunion (RE)</option>
+                                        <option value="RO" data-url="/romania-e-visa">Romania (RO)</option>
+                                        <option value="RU" data-url="/russia-invitation-letter">Russia (RU)</option>
+                                        <option value="RW" data-url="/rwanda-east-africa-visa">Rwanda (RW)</option>
+                                        <option value="BL" data-url="/st-barthelemy-visa">Saint Barthelemy (BL)</option>
+                                        <option value="SH" data-url="/st-helena-e-visa">Saint Helena (SH)</option>
+                                        <option value="KN" data-url="/st-kitts-and-nevis-e-visa">Saint Kitts and Nevis (KN)</option>
+                                        <option value="LC" data-url="/st-lucia-visa">Saint Lucia (LC)</option>
+                                        <option value="MF" data-url="/st-martin-visa">Saint Martin (MF)</option>
+                                        <option value="PM" data-url="/st-pierre-visa">Saint Pierre and Miquelon (PM)</option>
+                                        <option value="VC" data-url="/st-vincent-visa">Saint Vincent &amp; Grenadines (VC)</option>
+                                        <option value="WS" data-url="" disabled="disabled">Samoa (WS)</option>
+                                        <option value="SM" data-url="/san-marino-schengen-visa">San Marino (SM)</option>
+                                        <option value="ST" data-url="/sao-tome-e-visa">Sao Tome &amp; Principe (ST)</option>
+                                        <option value="SA" data-url="/saudi-arabia-e-visa">Saudi Arabia (SA)</option>
+                                        <option value="SN" data-url="/senegal-e-visa">Senegal (SN)</option>
+                                        <option value="RS" data-url="/serbia-visa">Serbia (RS)</option>
+                                        <option value="SC" data-url="/seychelles-visa-on-arrival">Seychelles (SC)</option>
+                                        <option value="SL" data-url="/sierra-leone-visa-on-arrival">Sierra Leone (SL)</option>
+                                        <option value="SG" data-url="/singapore-electronic-arrival-card">Singapore (SG)</option>
+                                        <option value="SX" data-url="/sint-maarten-visa">Sint Maarten (SX)</option>
+                                        <option value="SK" data-url="/slovakia-schengen-visa">Slovakia (SK)</option>
+                                        <option value="SI" data-url="/slovenia-schengen-visa">Slovenia (SI)</option>
+                                        <option value="SB" data-url="/solomon-islands-visa">Solomon Islands (SB)</option>
+                                        <option value="SO" data-url="/somalia-visa">Somalia (SO)</option>
+                                        <option value="ZA" data-url="/south-africa-e-visa">South Africa (ZA)</option>
+                                        <option value="GS" data-url="" disabled="disabled">South Georgia and the South Sandwich Islands (GS)</option>
+                                        <option value="KR" data-url="/korea-visa">South Korea (KR)</option>
+                                        <option value="SS" data-url="/south-sudan-visa">South Sudan (SS)</option>
+                                        <option value="ES" data-url="/spain-schengen-visa">Spain (ES)</option>
+                                        <option value="LK" data-url="/sri-lanka-visa">Sri Lanka (LK)</option>
+                                        <option value="SD" data-url="/sudan-visa">Sudan (SD)</option>
+                                        <option value="SR" data-url="/suriname-visa">Suriname (SR)</option>
+                                        <option value="SJ" data-url="" disabled="disabled">Svalbard &amp; Jan Mayen (SJ)</option>
+                                        <option value="SZ" data-url="/swaziland-visa">Swaziland (SZ)</option>
+                                        <option value="SE" data-url="/sweden-schengen-visa">Sweden (SE)</option>
+                                        <option value="CH" data-url="/switzerland-schengen-visa">Switzerland (CH)</option>
+                                        <option value="SY" data-url="/syria-visa">Syria (SY)</option>
+                                        <option value="TW" data-url="/taiwan-e-visa">Taiwan (TW)</option>
+                                        <option value="TJ" data-url="/tajikistan-visa">Tajikistan (TJ)</option>
+                                        <option value="TZ" data-url="/tanzania-visa">Tanzania (TZ)</option>
+                                        <option value="TH" data-url="/thailand-e-visa">Thailand (TH)</option>
+                                        <option value="TG" data-url="/togo-visa-on-arrival">Togo (TG)</option>
+                                        <option value="TK" data-url="/tokelau-visa">Tokelau (TK)</option>
+                                        <option value="TO" data-url="/tonga-visa-on-arrival">Tonga (TO)</option>
+                                        <option value="TT" data-url="/trinidad-visa-on-arrival">Trinidad and Tobago (TT)</option>
+                                        <option value="TN" data-url="/tunisia-visa">Tunisia (TN)</option>
+                                        <option value="TR" data-url="/turkey-turkish-visa">Turkey (TR)</option>
+                                        <option value="TM" data-url="/turkmenistan-visa">Turkmenistan (TM)</option>
+                                        <option value="TC" data-url="/turks-and-caicos-islands-visa">Turks &amp; Caicos Islands (TC)</option>
+                                        <option value="TV" data-url="/tuvalu-visa-on-arrival">Tuvalu (TV)</option>
+                                        <option value="UG" data-url="/uganda-visa-application">Uganda (UG)</option>
+                                        <option value="VG" data-url="/british-virgin-islands-visa-on-arrival">UK Virgin Islands (VG)</option>
+                                        <option value="UA" data-url="/ukraine-e-visa">Ukraine (UA)</option>
+                                        <option value="AE" data-url="/uae-e-visa">United Arab Emirates (AE)</option>
+                                        <option value="GB" data-url="/united-kingdom-electronic-visa-waiver">United Kingdom (GB)</option>
+                                        <option value="US" data-url="/esta-visa-usa">United States (US)</option>
+                                        <option value="UM" data-url="" disabled="disabled">United States Minor Outlying Islands (UM)</option>
+                                        <option value="UY" data-url="/uruguay-visa">Uruguay (UY)</option>
+                                        <option value="VI" data-url="/us-virgin-islands-visa">US Virgin Islands (VI)</option>
+                                        <option value="UZ" data-url="/uzbekistan-e-visa">Uzbekistan (UZ)</option>
+                                        <option value="VU" data-url="/vanuatu-visa-on-arrival">Vanuatu (VU)</option>
+                                        <option value="VA" data-url="/vatican-city-schengen-visa">Vatican City (VA)</option>
+                                        <option value="VE" data-url="/venezuela-visa">Venezuela (VE)</option>
+                                        <option value="VN" data-url="/vietnam-e-visa">Vietnam (VN)</option>
+                                        <option value="WF" data-url="/wallis-and-futuna-visa">Wallis and Futuna (WF)</option>
+                                        <option value="EH" data-url="/western-sahara-visa">Western Sahara (EH)</option>
+                                        <option value="YE" data-url="/yemen-visa">Yemen (YE)</option>
+                                        <option value="ZM" data-url="/zambia-visa">Zambia (ZM)</option>
+                                        <option value="ZW" data-url="/zimbabwe-visa">Zimbabwe (ZW    </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <script>
+                                $(document).ready(function(){
+                                    var code1="";
+                                    var url2="";
+                                    $("#travellingFrom").on("change", function () {
+                                        var code = $(this).children(":selected").val();
+                                        code1 = code;
+                                        if((code1.length===0) || (url2.length===0)){
+                                            return;
+                                        }
+                                        else{
+                                            window.location.href = 'https://www.ivisa.com'+(url2)+'?nationality='+(code1)+'&utm_source=cheapexo';
+                                        }
+                                    });
+                                    $("#travellingTo").on("change", function () {
+                                        var url = $(this).children("option:selected").data("url");
+                                        url2=url;
+                                        if((code1.length===0) || (url2.length===0)){
+                                            return;
+                                        }
+                                        else{
+                                            window.location.href = 'https://www.ivisa.com'+(url2)+'?nationality='+(code1)+'&utm_source=cheapexo';
+                                        }
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="visa-content">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="head">Most Popular Visas</div>
+                    <hr>
+                </div>
+            </div>
+            <div class="row top-margin-60">
+                <div class="col-sm-2">
+                    <a href="https://www.ivisa.com/visa-australia?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                        <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/AU.png">
+                        <h3 class="h5 my-2">Australia</h3>
+                    </a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="https://www.ivisa.com/india-visa-application?utm_source=cheapexo" target="_blank" class="card">
+                        <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/IN.png">
+                        <h3 class="h5 my-2">India</h3>
+                    </a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="https://www.ivisa.com/singapore-electronic-arrival-card?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                        <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/SG.png">
+                        <h3 class="h5 my-2">Singapore</h3>
+                    </a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="https://www.ivisa.com/sri-lanka-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                        <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/LK.png">
+                        <h3 class="h5 my-2">Sri Lanka</h3>
+                    </a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="https://www.ivisa.com/turkey-turkish-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                        <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/TR.png">
+                        <h3 class="h5 my-2">Turkey</h3>
+                    </a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="https://www.ivisa.com/us-tourist-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                        <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/US.png">
+                        <h3 class="h5 my-2">United States</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="row" id="collapseCountries">
+                         <div class="col-sm-2 top-margin-40 text-center">
+                            <a href="https://www.ivisa.com/angola-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/AO.png">
+                                <h3 class="h5 my-2">Angola</h3>
+                            </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/antigua-and-barbuda-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/AG.png">
+                                <h3 class="h5 my-2">Antigua &amp; Barbuda</h3>
+                            </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/argentina-tourist-evisa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/AR.png">
+                                <h3 class="h5 my-2">Argentina</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/armenia-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/AM.png">
+                                <h3 class="h5 my-2">Armenia</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/azerbaijan-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/AZ.png">
+                                <h3 class="h5 my-2">Azerbaijan</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/bahrain-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/BH.png">
+                                <h3 class="h5 my-2">Bahrain</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/benin-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/BJ.png">
+                                <h3 class="h5 my-2">Benin</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/cambodia-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/KH.png">
+                                <h3 class="h5 my-2">Cambodia</h3> 
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/canada-visa-eta?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/CA.png">
+                                <h3 class="h5 my-2">Canada</h3> 
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/cape-verde-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/CV.png">
+                                <h3 class="h5 my-2">Cape Verde</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/china-10-year-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/CN.png">
+                                <h3 class="h5 my-2">China</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/ivory-coast-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/CI.png"> 
+                                <h3 class="h5 my-2">Ivory Coast</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/djibouti-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/DJ.png"> 
+                                <h3 class="h5 my-2">Djibouti</h3> 
+                             </a>
+                            <figure>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/egypt-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/EG.png"> 
+                                <h3 class="h5 my-2">Egypt</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/ethiopia-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/ET.png"> 
+                                <h3 class="h5 my-2">Ethiopia</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/gabon-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/GA.png"> 
+                                <h3 class="h5 my-2">Gabon</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/georgia-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/GE.png"> 
+                                <h3 class="h5 my-2">Georgia</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/germany-schengen-visa?nationality=IN&utm_source=cheapexo" target="_blank" rel="noopener noreferrer" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/DE.png"> 
+                                <h3 class="h5 my-2">Germany</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/guernsey-leave-to-enter?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/GG.png"> 
+                                <h3 class="h5 my-2">Guernsey</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/hong-kong-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/HK.png"> 
+                                <h3 class="h5 my-2">Hong Kong</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/jordan-pass?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/JO.png"> 
+                                <h3 class="h5 my-2">Jordan</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/kenya-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/KE.png"> 
+                                <h3 class="h5 my-2">Kenya</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/kuwait-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/KW.png"> 
+                                <h3 class="h5 my-2">Kuwait</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/kyrgyzstan-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/KG.png"> 
+                                <h3 class="h5 my-2">Kyrgyzstan</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/laos-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/LA.png">
+                                <h3 class="h5 my-2">Laos</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/lesotho-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/LS.png"> 
+                                <h3 class="h5 my-2">Lesotho</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/madagascar-visa-on-arrival?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/MG.png"> 
+                                <h3 class="h5 my-2">Madagascar</h3> 
+                            </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/malawi-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/MW.png"> 
+                                <h3 class="h5 my-2">Malawi</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/malaysia-entri-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/MY.png">
+                                <h3 class="h5 my-2">Malaysia</h3>
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/mexico-tourist-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/MX.png"> 
+                                <h3 class="h5 my-2">Mexico</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/moldova-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/MD.png"> 
+                                <h3 class="h5 my-2">Moldova</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/myanmar-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/MM.png"> 
+                                <h3 class="h5 my-2">Myanmar</h3> 
+                             </a> 
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/new-zealand-eta?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/NZ.png">
+                                <h3 class="h5 my-2">New Zealand</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/nigeria-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/NG.png">
+                                <h3 class="h5 my-2">Nigeria</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/north-korea-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/KP.png">
+                                <h3 class="h5 my-2">North Korea</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/oman-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/OM.png">
+                                <h3 class="h5 my-2">Oman</h3> 
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/pakistan-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/PK.png">
+                                <h3 class="h5 my-2">Pakistan</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/papua-new-guinea-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/PG.png"> 
+                                <h3 class="h5 my-2">Papua New Guinea</h3> 
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/qatar-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/QA.png">
+                                <h3 class="h5 my-2">Qatar</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/russia-invitation-letter?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/RU.png">
+                                <h3 class="h5 my-2">Russia</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/rwanda-east-africa-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/RW.png">
+                                <h3 class="h5 my-2">Rwanda</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/saudi-arabia-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/SA.png">
+                                <h3 class="h5 my-2">Saudi Arabia</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/suriname-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/SR.png">
+                                <h3 class="h5 my-2">Suriname</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/taiwan-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/TW.png">
+                                <h3 class="h5 my-2">Taiwan</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/tajikistan-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/TJ.png">
+                                <h3 class="h5 my-2">Tajikistan</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/tanzania-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/TZ.png">
+                                <h3 class="h5 my-2">Tanzania</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/thailand-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/TH.png">
+                                <h3 class="h5 my-2">Thailand</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/uganda-visa-application?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/UG.png">
+                                <h3 class="h5 my-2">Uganda</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/ukraine-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/UA.png">
+                                <h3 class="h5 my-2">Ukraine</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                            <a href="https://www.ivisa.com/uae-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/AE.png">
+                                <h3 class="h5 my-2">United Arab Emirates</h3>
+                            </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/united-kingdom-electronic-visa-waiver?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/GB.png">
+                                <h3 class="h5 my-2">United Kingdom</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/uzbekistan-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/UZ.png">
+                                <h3 class="h5 my-2">Uzbekistan</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/vietnam-e-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/VN.png">
+                                <h3 class="h5 my-2">Vietnam</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/zambia-visa?nationality=IN&utm_source=cheapexo" target="_blank" class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/ZM.png">
+                                <h3 class="h5 my-2">Zambia</h3>
+                             </a>
+                         </div>
+                         <div class="col-sm-2 top-margin-40 text-center">
+                             <a href="https://www.ivisa.com/zimbabwe-visa?nationality=IN&utm_source=cheapexo" target="_blank"class="card">
+                                <img class="flag block mx-auto" src="https://d2v38geh4xxze4.cloudfront.net/img/flags/ZW.png">
+                                <h3 class="h5 my-2">Zimbabwe</h3>
+                             </a>
+                         </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center align-self-center top-margin-40">
+                    <div id="collapseCountriesbtn">
+                        <span class="more"><i class="fas fa-chevron-circle-down"></i><strong>VIEW MORE</strong></span>
+                        <span class="less"><i class="fas fa-chevron-circle-up"></i><strong>VIEW LESS</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>© 2019 Cheapexo Pvt. Ltd. India. All brands are trademarks of their respective owners.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        $('.more').click(function(){
+            $('#collapseCountries').css('display','flex');
+            $('.more').css('display','none');
+            $('.less').css('display','grid');
+        });
+        $('.less').click(function(){
+            $('#collapseCountries').css('display','none');
+            $('.more').css('display','grid');
+            $('.less').css('display','none');
+        });
+    </script>
+
+    <script>
+        var login = false;
+        $("#login").click(function() {
+            if(login==true){
+                $(".user-more-info").css('display','block');
+            }
+            else{
+                $(".login-model").css('display','flex');
+            }
+        });
+        $(".close").click(function() {
+            $(".login-model").css('display','none');
+        });
+        $(".signup-notify").click(function() {
+            $(".login-box").css('display','none');
+            $(".signup-box").css('display','block');
+        });
+        $(".signin-notify").click(function() {
+            $(".login-box").css('display','block');
+            $(".signup-box").css('display','none');
+        });
+
+        $(".input").focus(function(){
+            $(this).parent().addClass("focus");
+            }).blur(function(){
+                if($(this).val() ===''){
+                $(this).parent().removeClass("focus");
+            }
+        });
+
+    </script>
+
+
+    <script>
+        $(document).ready(function(){       
+            var scroll_pos = 0;
+            $(document).scroll(function() { 
+                scroll_pos = $(this).scrollTop();
+                if(scroll_pos > 60) {
+                    $("header").addClass('solid-back');
+                    //$(".light-logo").css('display','none');
+                    //$(".dark-logo").css('display','block');
+                } 
+                else{
+                    $("header").removeClass('solid-back');
+                    //$(".light-logo").css('display','block');
+                    //$(".dark-logo").css('display','none');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $('.customers-slider').owlCarousel({
+            autoplay: true,
+            loop: true,
+            margin:25,
+            dots:false,
+            slideTransition:'linear',
+            autoplayTimeout:4000,
+            autoplayHoverPause:true,
+            autoplaySpeed:4000,
+            responsive:{
+                0:{
+                    items:1
+                },
+                500: {
+                    items:2
+                },
+                600:{
+                    items:3
+                },
+                800:{
+                    items:3
+                },
+                1200:{
+                    items:4
+                }
+
+            }
+
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript" src="js/cheapexo.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

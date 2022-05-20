@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cheapexo - Flight Booking, Train Reservation, Hotels, Cheap Air Tickets</title>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#281483">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/the-datepicker.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script src="js/the-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="icon" href="images/icon.png" type="image"/>
+</head>
+<body class="dim-dark-background">
+    <header class="solid-back">
+        <a href="" class="site-name"><img src="images/cheapexo-dark.png" alt=""></a>
+        <nav>
+            <a href="" class="link active"><i class="fas fa-plane-departure"></i>Fligths<span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-hotel"></i>Hotels <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-bus"></i>Buses <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-taxi"></i>Taxi <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-train"></i>Trains <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-ship"></i>Cruise <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-helicopter"></i>Helicopter <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-taxi"></i>Air Taxi <span class="line"></span></a>
+            <a href="" class="link"><i class="fab fa-cc-visa"></i></i>Visa <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-gift"></i>Offers <span class="line"></span></a>
+            <a href="" class="link"><i class="fas fa-pencil-alt"></i>Travel Stories <span class="line"></span></a>
+            <div class="dropdown">
+                <span class="dropbtn">More..</span>
+                <div class="dropdown-content">
+                    <a href="" class="drop-link">Forex</a>
+                    <a href="" class="drop-link">Anything</a>
+                </div>
+            </div>
+        </nav>
+        <div class="login" id="login">
+            <i class="fas fa-user-circle"></i>
+            <div class="user-more-info" id="user-more-info">
+                <div class="tip"></div>
+                <div class="item">Account</div>
+                <div class="item">Bookings</div>
+                <div class="item">Alerts</div>
+                <div class="item">Travellers</div>
+                <div class="item">Logout</div>
+            </div>
+        </div>
+        <div class="btnm">
+            <div class="btnmenu">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </div>
+        </div>
+    </header>
+    <div class="model login-model">
+        <div class="login-box">
+            <div class="login-head">
+                <img src="images/close-light.svg" alt="" class="close">
+                <div class="form-title">Sign In</div>
+            </div>
+            <form class="login-body">
+                <div class="inputBox">
+                    <div class="inputText">USERNAME</div>
+                    <input type="text" name="username" class="input" id="username" required>
+                </div>
+                <div class="inputBox">
+                    <div class="inputText">PASSWORD</div>
+                    <input type="password" name="password" class="input" id="password" required>
+                </div>
+                <a href="forget.html" class="forget">Forget Password ?</a>
+                <div class="inputBox">
+                    <input type="submit"  class="btn-apply" value="LOGIN">
+                </div>
+                <span class="signup-notify">Don't have an account? <strong>SIGN UP</strong></span>
+            </form>
+        </div>
+        <div class="signup-box">
+                <div class="signup-head">
+                    <img src="images/close-light.svg" alt="" class="close">
+                    <div class="form-title">Sign Up</div>
+                </div>
+                <form class="signup-body">
+                    <div class="inputBox">
+                        <div class="inputText">Email / Mobile number</div>
+                        <input type="text" name="username" class="input" id="username" required>
+                    </div>
+                    <div class="inputBox">
+                        <div class="inputText">PASSWORD</div>
+                        <input type="password" name="password" class="input" id="password" required>
+                    </div>
+                    <div class="inputBox">
+                        <div class="inputText">CONFIRM PASSWORD</div>
+                        <input type="password" name="confirm-password" class="input" id="confirm-password" required>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit"  class="btn-apply" value="LOGIN">
+                    </div>
+                    <span class="signin-notify">Have an account? <strong>SIGN IN</strong></span>
+                </form>
+            </div>
+    </div>
+    <div class="progress-header">
+        <div class="progress-content">
+            <div class="transparent">
+                <div class="progress-tracker">
+                    <div class="progress-item first current">
+                        <div class="item-wrapper">
+                            <div class="progess-item-label">Review</div>
+                        </div>
+                    </div>
+                    <div class="progress-item middle">
+                        <div class="item-wrapper">
+                            <div class="progess-item-label">Traveller details</div>
+                        </div>
+                    </div>
+                    <div class="progress-item last">
+                        <div class="item-wrapper">
+                            <div class="progess-item-label">Payment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flight-book">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row" id="flight-detail">
+                        <div class="col">
+                            <div class="flight-detail">
+                                <div class="flight-segment-detail">
+                                    <div class="accordion-item">
+                                        <div class="accordion-hdr ">
+                                            <div class="accordion-hdr-cntnt">
+                                                <div class="leg-summary">
+                                                    <div class="u-lfloat">New Delhi to Mumbai</div>
+                                                    <div class="u-rfloat">
+                                                        <div class="date">Sun, 24 Nov</div>
+                                                        <i class="fas fa-circle"></i>
+                                                        <div class="time">1hr 15min</div>
+                                                    </div>
+                                                    <div class="u-clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-body">
+                                            <div class="segment">
+                                                <div class="airline">
+                                                    <div class="logo">
+                                                        <img src="images/airlines/spicejet.png">
+                                                    </div>
+                                                    <div class="info">Go Air G8208</div>
+                                                    <div class="aircraft-info">A320-200</div>
+                                                    <div class="cabin-class">economy</div>
+                                                    <div class="aircraft-info">Narrow 3-3 (Limited seat tilt)</div>
+                                                    <div class="aircraft-info">Narrow</div>
+                                                </div>
+                                                <div class="segment2">
+                                                    <div class="flight-info">
+                                                        <div class="summary">
+                                                            <div class="left-wing">
+                                                                <div class="highlight">
+                                                                    <div class="city">Lucknow</div>
+                                                                    <div class="airport-code">(LKO)</div>
+                                                                </div>
+                                                                <div class="time"> 06:40</div>
+                                                                <div class="date">Sun, 24 Nov</div>
+                                                                <div class="airport u-text-ellipsis" title="Amausi Airport">Amausi Airport</div>
+                                                            </div>
+                                                            <div class="middle">
+                                                                <div class="icon ti-time"></div>
+                                                                <div class="duration">1hr 15min</div>
+                                                            </div>
+                                                            <div class="right-wing">
+                                                                <div class="highlight">
+                                                                    <div class="city">New Delhi</div>
+                                                                    <div class="airport-code">(DEL)</div>
+                                                                </div>
+                                                                <div class="time"> 07:55</div>
+                                                                <div class="date">Sun, 24 Nov</div>
+                                                                <div class="airport u-text-ellipsis" title="Indira Gandhi Intl Airport">Indira Gandhi Intl Airport</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="u-clear"></div>
+                                                    </div>
+                                                    <div class="amenities">
+                                                        <div class="row no-gutters">
+                                                            <div class="col-6 align-self-center">
+                                                                <div class="row no-gutters">
+                                                                    <div class="col-4 text-center">
+                                                                        <i class="fas fa-wifi wifi available"></i>
+                                                                    </div>
+                                                                    <div class="col-8 text-left">
+                                                                        <span class="available">Wifi</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="row no-gutters">
+                                                                    <div class="col-3 text-center align-self-center">
+                                                                        <i class="fas fa-plug plug"></i>
+                                                                    </div>
+                                                                    <div class="col-9 text-left">
+                                                                        <span>In-seat Power</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row no-gutters align-self-center top-margin-20">
+                                                            <div class="col-6">
+                                                                <div class="row no-gutters">
+                                                                    <div class="col-4 text-center">
+                                                                        <i class="fas fa-utensils food"></i>
+                                                                    </div>
+                                                                    <div class="col-8 text-left">
+                                                                        <span>Food</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="row no-gutters">
+                                                                    <div class="col-3 text-center">
+                                                                        <i class="fab fa-youtube video"></i>
+                                                                    </div>
+                                                                    <div class="col-9 text-left">
+                                                                        <span>Video</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="u-clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nav-header">
+                                            <nav class="nav-list">
+                                                <span>
+                                                    <a class="nav-list-item baggage-nav u-uppercase u-ib selected" data="0">Baggage</a>
+                                                </span>
+                                                <span>
+                                                    <a class="nav-list-item fare-rule-nav u-uppercase u-ib " data="1">Fare Rules</a>
+                                                </span>
+                                                <span>
+                                                    <a class="nav-list-item terms-nav u-uppercase u-ib " data="2">Terms &amp; Conditions</a>
+                                                </span>
+                                            </nav>
+                                            <div class="close-icon"><i class="fas fa-times"></i></div>
+                                        </div>
+                                        <div class="baggage">
+                                            <div class="row">
+                                                <div class="col-4 text-left">
+                                                    <div class="flight-head">Flight</div>
+                                                </div>
+                                                <div class="col-4 text-center">
+                                                    <div class="cabin-head">Cabin Baggage</div>
+                                                </div>
+                                                <div class="col-4 text-center">
+                                                    <div class="check-head">Check-In Baggage</div>
+                                                </div>
+                                            </div>
+                                            <div class="row no-gutters top-margin-20">
+                                                <div class="col-4 text-left">
+                                                    <div class="flight">
+                                                        <img src="images/airlines/spicejet.png">
+                                                        <div class="detail">
+                                                            <div class="airport-code">DEL -</div>
+                                                            <div class="airport-code">BOM</div>
+                                                            <div class="flight-number">Go Air G8446</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 text-center align-self-center">
+                                                    <div class="cabin">7 Kg</div>
+                                                </div>
+                                                <div class="col-4 text-center align-self-center">
+                                                    <div class="">15 Kg</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fare-rule">
+                                            <div class="fare-rule-header">
+                                                <div class="row">
+                                                    <div class="col-5 col-md-9">
+                                                        <div class="leg-label active">LKO - DEL</div>
+                                                    </div>
+                                                    <div class="col-7 col-md-3 text-right">
+                                                        <div class="type-tag refundable">Partially Refundable</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fare-rule-content">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="card">
+                                                            <div class="head"><strong>Cancellation fee</strong> (per person)</div>
+                                                            <div class="content">
+                                                                <div class="row">
+                                                                    <div class="col-6 text-left">
+                                                                        <div class="title">Airline fee</div>
+                                                                    </div>
+                                                                    <div class="col-6 text-right">
+                                                                        <div class="text">₹3500</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6 text-left">
+                                                                        <div class="title">Cheapexo fee</div>
+                                                                    </div>
+                                                                    <div class="col-6 text-right">
+                                                                        <div class="text">₹270</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6 text-left">
+                                                                        <div class="text">Total cancellation fee</div>
+                                                                    </div>
+                                                                    <div class="col-6 text-right">
+                                                                        <div class="text total">₹3770</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="card">
+                                                            <div class="head"><strong>Rescheduling fee </strong>(per person)</div>
+                                                            <div class="content">
+                                                                <div class="row">
+                                                                    <div class="col-6 text-left">
+                                                                        <div class="title">Airline fee</div>
+                                                                    </div>
+                                                                    <div class="col-6 text-right">
+                                                                        <div class="text">₹3000</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6 text-left">
+                                                                        <div class="title">Cheapexo fee</div>
+                                                                    </div>
+                                                                    <div class="col-6 text-right">
+                                                                        <div class="text">₹270</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6 text-left">
+                                                                        <div class="text">Total rescheduling fee</div>
+                                                                    </div>
+                                                                    <div class="col-6 text-right">
+                                                                        <div class="text total">₹3270</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="note-section">
+                                                <div class="heading">Please Note</div>
+                                                <div class="list-container">
+                                                    <ol>
+                                                        <li>Cancellation charges are applicable per passenger per sector.</li>
+                                                        <li>Partial cancellation cannot be made for tickets booked under special or discounted fares.</li>
+                                                        <li>In case of a no-show or for tickets cancelled post a specific time, only statutory taxes are refundable.</li>
+                                                        <li>Penalty charged by the airline is indicative only, and may change without any prior notice.</li>
+                                                        <li>Cancellation request will be processed only within the mentioned time period.</li>
+                                                        <li>If the flight fare is less than default cancellation penalty then taxes will be refundable.</li>
+                                                    </0l>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="terms">
+                                            <ul>
+                                               <li>Airlines may charge an additional fee for baggage, insurance, use of credit cards, etc.</li>
+                                               <li>Baggage allowance and convenience fee may change based on individual airline policies.</li>
+                                               <li>Although we try to ensure price accuracy, we can not guarantee absolute pricing due to the dynamic nature of flight fares.</li>
+                                               <li>Please note: We are not a travel agency and do not sell tickets directly. Although you can always get in touch with us at feedback@ixigo.com, for any questions regarding your booking, it is advisable to directly contact the travel agency or airline.</li>
+                                            </ul>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-margin-20" id="contact-group">
+                        <div class="col">
+                            <div class="contact-group">
+                                <div class="box">
+                                    <div class="head">
+                                        <div class="contact-hdr">Contact Details <span>(Your ticket and flight info will be sent here)</span> </div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-content">
+                                                    <label for="toF">Mobile Number</label>
+                                                    <input type="number" name="mobile_number" value='' id="Mobile" class="input" placeholder="Mobile Number">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-content">
+                                                    <label for="toF">Email Address</label>
+                                                    <input type="email" name="email" value='' id="email" class="input" placeholder="Email Address">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="booking-review-summary">
+                        <div class="col">
+                            <div class="booking-review-summary">
+                                <div class="row no-gutters">
+                                    <div class="col-md-7 dashed-right-border">
+                                        <div class="flight-leg-summary">
+                                            <div class="row no-gutters">
+                                                <div class="col-2">
+                                                    <div class="airline-info">
+                                                        <div class="logo"><img title="Go Air" src="images/airlines/spicejet.png"></div>
+                                                        <div class="text">
+                                                           <div>
+                                                              <div title="Go Air" class="name">Go Air</div>
+                                                              <div title="G8429" class="number">G8429</div>
+                                                           </div>
+                                                        </div>
+                                                     </div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="leg-summary">
+                                                        <div class="left-wing">
+                                                           <div class="airport-code">DEL 21:35</div>
+                                                           <div class="date">Thu, 19 Dec</div>
+                                                        </div>
+                                                        <div class="timeline-widget">
+                                                           <div class="c-timeline-wrapper horizontal">
+                                                              <div class="label tl first"></div>
+                                                              <div class="label tl ">2hr 10min</div>
+                                                              <div class="label tl last"></div>
+                                                              <div class="c-timeline">
+                                                                 <div class="dot"></div>
+                                                                 <div class="dot"></div>
+                                                              </div>
+                                                              <div class="label br first"></div>
+                                                              <div class="label br ">non-stop</div>
+                                                              <div class="label br last"></div>
+                                                           </div>
+                                                        </div>
+                                                        <div class="right-wing">
+                                                           <div class="airport-code">BOM 23:50</div>
+                                                           <div class="date">Thu, 19 Dec</div>
+                                                        </div>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                            
+                                         </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="row no-gutters h-100">
+                                            <div class="col-9 auto-margin">
+                                                <div class="booking-contact">
+                                                    <div class="mobile u-text-ellipsis" title="+91 - 8439243336">+91 - 8439243336</div>
+                                                    <div class="email u-text-ellipsis" title="ankitvarshney1810@gmail.com">ankitvarshney1810@gmail.com</div>
+                                                 </div>
+                                            </div>
+                                            <div class="col-3 auto-margin">
+                                                <div class="link" id="modify">MODIFY</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-margin-20" id="traveller-detail">
+                        <div class="col">
+                            <div class="traveller-detail">
+                                <div class="box">
+                                    <div class="head">
+                                        <div class="contact-hdr">Enter traveller details <span>1 Traveller</span> </div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <form action="">
+                                                    <div class="traveller">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="heading">1 Adult</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-2">
+                                                                <div class="form-content">
+                                                                    <label for="toF">Name</label>
+                                                                    <select name="title" id="title">
+                                                                        <option value="" disabled selected>Title</option>
+                                                                        <option value="mr">Mr</option>
+                                                                        <option value="ms">Ms</option>
+                                                                        <option value="mrs">Mrs</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-5 align-self-end">
+                                                                <div class="form-content">
+                                                                    <input type="text" name="first_name" value="" id="first_name" class="input" placeholder="First Name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-5 align-self-end">
+                                                                <div class="form-content">
+                                                                    <input type="text" name="last_name" value="" id="last_name" class="input" placeholder="Last Name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-5 top-margin-20">
+                                                                <div class="form-content">
+                                                                    <label for="toF">Email Address</label>
+                                                                    <input type="email" name="email" value='' id="email" class="input" placeholder="Email Address">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="traveller-list">
+                                                    <div class="header">Travellers List</div>
+                                                    <div class="traveller-wrapper">
+                                                        <div class="list-heading">Adult Travellers</div>
+                                                        <div class="list-body">
+                                                            <label class="list-item">
+                                                                <i class="fas fa-user-circle"></i>
+                                                                <div class="trvlr-info">
+                                                                    <div class="trvlr-name">Ankit varshney</div>
+                                                                    <div class="trvlr-dtl">Adult, male</div>
+                                                                </div>
+                                                                <input type="checkbox" class="timefilter" value="earlymorning" id="earlymorning" onchange="valueChanged()">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="fare-detail-box">
+                        <div class="fare-heading"><strong>Fare Summary</strong><span> (1 traveller)</span><i class="fas fa-chevron-down down-icon"></i><i class="fas fa-chevron-up up-icon"></i></div>
+                        <div class="fare-contant">
+                            <div class="fare-dtl-row row no-gutters show">
+                                <div class="col-6 text-left">
+                                    <span class="fare-type">Fare Type</span>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <span class="refundable">
+                                        <span class="">Partially Refundable</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="fare-dtl-row row no-gutters show">
+                                <div class="col-6 text-left">
+                                    <span class="fare-type">Base Fare</span>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <span class="cost">
+                                        <i class="fas fa-rupee-sign"></i>
+                                        <span class="">10241</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="fare-dtl-row row no-gutters show">
+                                <div class="col-6 text-left">
+                                    <span class="fare-type">Taxes & Fees</span>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <span class="cost">
+                                        <i class="fas fa-rupee-sign"></i>
+                                        <span class="">1336</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="fare-dtl-row row no-gutters show">
+                                <div class="col-6 text-left">
+                                    <span class="fare-type">Convenience Fee*</span>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <span class="cost">
+                                        <i class="fas fa-rupee-sign"></i>
+                                        <span class="">299</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="fare-dtl-row row no-gutters">
+                                <div class="col-6 text-left">
+                                    <span class="total-fare">You Pay</span>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <span class="pay-cost">
+                                        <i class="fas fa-rupee-sign"></i>
+                                        <span>14817</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="conv-fee show"><i class="fas fa-asterisk"></i> Non-refundable charges</div>
+                        </div>
+                    </div>
+                    <div class="continue">
+                        <button class="btn btn-apply text-uppercase" id="book-continue">continue</button>
+                        <button class="btn btn-apply text-uppercase" id="pay">Pay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>© 2019 Cheapexo Pvt. Ltd. India. All brands are trademarks of their respective owners.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $("#book-continue").click(function(){
+            $("#flight-detail").hide();
+            $("#contact-group").hide();
+            $("#booking-review-summary").show();
+            $("#traveller-detail").show();
+            $(".first").removeClass("current");
+            $(".first").addClass("completed");
+            $(".middle").addClass("current");
+            $("#book-continue").hide();
+            $("#pay").show();
+        });
+        $("#modify").click(function(){
+            $("#flight-detail").show();
+            $("#contact-group").show();
+            $("#booking-review-summary").hide();
+            $("#traveller-detail").hide();
+            $(".first").removeClass("completed");
+            $(".first").addClass("current");
+            $(".middle").removeClass("current");
+            $("#book-continue").show();
+            $("#pay").hide();
+        });
+    </script>
+
+    <script>
+        $(".baggage-nav").click(function() {
+            $(this).addClass('selected');
+            $(".baggage").css('display','block');
+            $(".fare-rule").css('display','none');
+            $(".terms").css('display','none');
+            $(".fare-rule-nav").removeClass('selected');
+            $(".terms-nav").removeClass('selected');
+        });
+        $(".fare-rule-nav").click(function() {
+            $(this).addClass('selected');
+            $(".fare-rule").css('display','block');
+            $(".baggage").css('display','none');
+            $(".terms").css('display','none');
+            $(".baggage-nav").removeClass('selected');
+            $(".terms-nav").removeClass('selected');
+        });
+        $(".terms-nav").click(function() {
+            $(this).addClass('selected');
+            $(".terms").css('display','block');
+            $(".baggage").css('display','none');
+            $(".fare-rule").css('display','none');
+            $(".baggage-nav").removeClass('selected');
+            $(".fare-rule-nav").removeClass('selected');
+        });
+        $(".close-icon").click(function() {
+            $(".baggage").css('display','none');
+            $(".fare-rule").css('display','none');
+            $(".terms").css('display','none');
+            $(".baggage-nav").removeClass('selected');
+            $(".fare-rule-nav").removeClass('selected');
+            $(".terms-nav").removeClass('selected');
+        });
+    </script>
+
+    <script>
+        $(".down-icon").click(function() {
+            $(".down-icon").css('display','none');
+            $(".up-icon").css('display','block');
+            $(".show").show();
+        });
+        $(".up-icon").click(function() {
+            $(".up-icon").css('display','none');
+            $(".down-icon").css('display','block');
+            $(".show").hide();
+        });
+    </script>
+
+    <script>
+        var login = false;
+        $("#login").click(function() {
+            if(login==true){
+                $(".user-more-info").css('display','block');
+            }
+            else{
+                $(".login-model").css('display','flex');
+            }
+        });
+        $(".close").click(function() {
+            $(".login-model").css('display','none');
+        });
+        $(".signup-notify").click(function() {
+            $(".login-box").css('display','none');
+            $(".signup-box").css('display','block');
+        });
+        $(".signin-notify").click(function() {
+            $(".login-box").css('display','block');
+            $(".signup-box").css('display','none');
+        });
+
+        $(".input").focus(function(){
+            $(this).parent().addClass("focus");
+            }).blur(function(){
+                if($(this).val() ===''){
+                $(this).parent().removeClass("focus");
+            }
+        });
+
+    </script>
+
+
+
+
+
+
+
+    <script type="text/javascript" src="js/cheapexo.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

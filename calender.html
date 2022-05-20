@@ -1,0 +1,184 @@
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+th {
+  height: 10px;
+  text-align: center;
+  font-weight: 15;
+}
+
+td {
+  height: 10px;
+ width: 10px;
+}
+
+.today {
+  background-color: gray;
+}
+
+th:nth-of-type(7),
+td:nth-of-type(7) {
+  font-weight: bold;
+}
+
+th:nth-of-type(1),
+td:nth-of-type(1) {
+  font-weight: bold;
+}
+.li{
+  list-style-type: none;
+
+}
+#output{
+
+width: 27%;
+height: 100px;
+text-align: center;
+font-size: 13px;
+font-weight: 100;
+font-weight: 600;
+box-sizing:border-box;
+
+}
+.dateDisplay{
+box-shadow: 1px 2px #888888;
+
+position:relative;
+cursor: pointer;
+
+/*z-index:1;*/
+background-color: #ffffff;
+
+
+}
+
+  </style>
+  </head>
+  <body>
+    <input type="text" id="date"  autocomplete="off" maxlength="30">
+    <div id="output">
+    </div>
+
+</body>
+<script>
+
+/*=======================To-select=============================*/ 
+  function toselect(dddat) {
+  //get date with the help of toselect function and put into inputfield.
+  $('input[id=date]').val(dddat);
+  element=document.getElementById("output");
+  element.style.visibility = "hidden";
+}
+/*========================clean_display============================*/ 
+
+ function clean_display(){
+  //clear pre. data
+  $('#output').text('')
+  
+}   
+/*=================On-click===================================*/ 
+    $('#date').on('click',function(){
+      //fire onclick event into input box and call get_date_with_price
+    clean_display();
+    get_date_with_price();
+  
+    });
+
+/*=====================date_with_price_display===============================*/     
+  function date_with_price_display(calendar){
+    //loop for disply date with price
+    var months = {
+    '01' : 'Jan',
+    '02' : 'Feb',
+    '03' : 'Mar',
+    '04' : 'Apr',
+    '05' : 'May',
+    '06' : 'Jun',
+    '07' : 'Jul',
+    '08' : 'Aug',
+    '09' : 'Sep',
+    '10' : 'Oct',
+    '11' : 'Nov',
+    '12' : 'Dec'
+};
+
+
+  for( var i in calendar)
+    month_year = calendar[i].date.split('-')[1];
+    keyObj2 = Object.keys(months);
+    console.log(keyObj2);
+    for( var j = 1 in months){
+    var monthskey=keyObj2[j];
+}
+    valueObj2 = Object.values(months);
+    console.log(valueObj2);
+    if(monthskey==month_year){
+     $('#output').prepend('<div>'+(valueObj2[j])+  '</div>');
+      console.log(valueObj2[j]);
+     };
+  $.each(calendar, function(i, item) {
+      month_year = item.date
+      date2 = item.date.split("-")[2];
+      date1 = item.date //get only date and price
+      var departure_dateform=new Date(date1);
+      var depart_string=departure_dateform.toDateString();
+      var day=depart_string.slice(0,3);
+      var meramonth=depart_string.slice(3,7);
+      price=item.price;
+      //console.log(item);
+      //append date and price to diplay dynamic data & data get from get_date_with_price
+      $('#output').prepend(            
+                  '<ul class="dateDisplay"  onClick="toselect(\'' + (date2) + (meramonth) + ', ' + (day) + '\')">'+
+                  
+                  '<li class="col-md-2 li" >'+ (date2)+'<br>'+(price)+'</li>'+   
+                  '</ul>'
+
+              );
+  });
+
+}
+/*====================start-date-with-price-functions======================*/
+
+function get_date_with_price(code){
+  $.ajax({ 
+    //using ajax data get from kiwi date with price api and pass value dynamically fly_from and fly_to
+             type: "GET",
+             dataType: "json",
+             beforeSend: setHeader,
+             url: "https://kiwicom-prod.apigee.net/aggregation_search/price_per_date?fly_from=MAA&fly_to=DEL&date_from=19%2F11%2F2019&date_to=31%2F12%2F2019&max_fly_duration=20&flight_type=oneway&adults=1&curr=INR&locale=en&limit=30&sort=price&asc=1",
+
+             success: function(dataa){ 
+             var calendar=dataa['data']
+             console.log(calendar);
+              // alert("msg");
+             if(calendar){
+              date_with_price_display(calendar)
+             }
+            
+            }
+         });
+}
+
+/*=====================Token-key===============================*/
+//pass apikey into api header for validating api
+function setHeader(xhr) {
+  xhr.setRequestHeader('apikey', 'oq08oIlWagyVUx7KkfvpRxVO2rqSaIPW')
+}
+/*====================================================*/
+</script>
+</html>
